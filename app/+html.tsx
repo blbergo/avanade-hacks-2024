@@ -23,7 +23,6 @@ export default function Root({ children }: { children: React.ReactNode }) {
         */}
         <ScrollViewStyleReset />
 
- 
         {/* Add any additional <head> elements that you want globally available on web... */}
       </head>
       <body>{children}</body>
