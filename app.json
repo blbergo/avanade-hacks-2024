@@ -1,7 +1,7 @@
 {
   "expo": {
-    "name": "native-wind-supabase-template",
-    "slug": "native-wind-supabase-template",
+    "name": "spacer",
+    "slug": "spacer",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/images/icon.png",
