@@ -1,0 +1,88 @@
+{
+  "spdetail": {
+    "engine": "accl",
+    "section": [
+      {
+        "typeId": 41,
+        "panel": [
+          { "typeId": 411 },
+          { "typeId": 412 },
+          {
+            "item": [
+              { "itemId": 7, "itemName": "Amplified Sound - Not Allowed" },
+              { "itemId": 53, "itemName": "Food - Allowed" }
+            ],
+            "typeId": 413
+          },
+          { "typeId": 414 }
+        ]
+      },
+      {
+        "typeId": 42,
+        "panel": [
+          {
+            "item": [
+              { "itemTypeId": 4211, "capacity": 4 },
+              {
+                "itemId": 23,
+                "itemName": "Hollow Square",
+                "isDefault": 1,
+                "capacity": 4
+              }
+            ],
+            "typeId": 421
+          },
+          {
+            "item": [
+              { "itemId": 112, "itemName": "ASI" },
+              { "itemId": 2, "itemName": "Available For Public Use" },
+              { "itemId": 4, "itemName": "Campus - Main" },
+              { "itemId": 28, "itemName": "Type - Multi-Purpose" }
+            ],
+            "typeId": 422
+          },
+          {
+            "item": [
+              {
+                "itemId": 365,
+                "itemName": "035 2315",
+                "itemTypeId": 4,
+                "itemLabel": "Subdivision Of"
+              },
+              {
+                "itemId": 824,
+                "itemName": "035 2315AB",
+                "itemTypeId": 4,
+                "itemLabel": "Subdivision Of"
+              },
+              {
+                "itemId": 825,
+                "itemName": "035 2315BC",
+                "itemTypeId": 4,
+                "itemLabel": "Subdivision Of"
+              }
+            ],
+            "typeId": 423
+          },
+          {
+            "item": [
+              { "itemId": 73, "itemName": "Castro, Janet", "itemTypeId": 3 }
+            ],
+            "typeId": 424
+          },
+          { "typeId": 425 },
+          { "item": [{ "itemId": 0, "itemName": 0 }], "typeId": 426 },
+          { "typeId": 427 },
+          {
+            "item": [
+              { "itemId": 19, "itemName": "Building 35: Bronco Student Center" }
+            ],
+            "typeName": "Building",
+            "typeId": 436
+          }
+        ]
+      }
+    ],
+    "pubdate": "2024-04-09T11:04:54-07:00"
+  }
+}

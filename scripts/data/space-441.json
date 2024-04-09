@@ -1,0 +1,102 @@
+{
+  "spdetail": {
+    "engine": "accl",
+    "section": [
+      {
+        "typeId": 41,
+        "panel": [
+          { "typeId": 411 },
+          { "typeId": 412 },
+          { "typeId": 413 },
+          {
+            "item": [
+              {
+                "itemId": -14,
+                "itemName": 34.056488,
+                "custAttrId": -14,
+                "itemTypeId": "F",
+                "itemLabel": "Latitude"
+              },
+              {
+                "itemId": -15,
+                "itemName": -117.824969,
+                "custAttrId": -15,
+                "itemTypeId": "F",
+                "itemLabel": "Longitude"
+              }
+            ],
+            "typeId": 414
+          }
+        ]
+      },
+      {
+        "typeId": 42,
+        "panel": [
+          {
+            "item": [
+              { "itemTypeId": 4211, "capacity": 100 },
+              {
+                "itemId": 12,
+                "itemName": "Cluster",
+                "isDefault": 1,
+                "capacity": 100
+              },
+              { "itemId": 35, "itemName": "Chairs Only", "capacity": 100 },
+              { "itemId": 10, "itemName": "Circle", "capacity": 100 },
+              { "itemId": 13, "itemName": "Conference", "capacity": 100 },
+              {
+                "itemId": 19,
+                "itemName": "Crescent / Half Circle",
+                "capacity": 100
+              },
+              { "itemId": 20, "itemName": "Custom", "capacity": 100 },
+              { "itemId": 21, "itemName": "Empty", "capacity": 100 },
+              { "itemId": 22, "itemName": "Exhibits", "capacity": 100 },
+              { "itemId": 23, "itemName": "Hollow Square", "capacity": 100 },
+              { "itemId": 29, "itemName": "Rounds of 10", "capacity": 100 },
+              { "itemId": 30, "itemName": "Rounds of 6", "capacity": 100 },
+              { "itemId": 31, "itemName": "Rounds of 8", "capacity": 100 },
+              {
+                "itemId": 32,
+                "itemName": "School Room / Theater Split",
+                "capacity": 100
+              },
+              { "itemId": 36, "itemName": "Social", "capacity": 100 },
+              { "itemId": 33, "itemName": "Theater", "capacity": 100 },
+              { "itemId": 34, "itemName": "U-Shaped", "capacity": 100 }
+            ],
+            "typeId": 421
+          },
+          {
+            "item": [
+              { "itemId": 2, "itemName": "Available For Public Use" },
+              { "itemId": 4, "itemName": "Campus - Main" }
+            ],
+            "typeId": 422
+          },
+          { "typeId": 423 },
+          {
+            "item": [
+              { "itemId": 85, "itemName": "Elliott, Laura", "itemTypeId": 3 }
+            ],
+            "typeId": 424
+          },
+          { "typeId": 425 },
+          { "item": [{ "itemId": 0, "itemName": 0 }], "typeId": 426 },
+          { "typeId": 427 },
+          {
+            "item": [
+              {
+                "itemId": 33,
+                "itemName": "Building 76: Kellogg West Education/Dining"
+              }
+            ],
+            "typeName": "Building",
+            "typeId": 436
+          }
+        ]
+      }
+    ],
+    "pubdate": "2024-04-09T11:05:34-07:00"
+  }
+}

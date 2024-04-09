@@ -1,0 +1,77 @@
+{
+  "spdetail": {
+    "engine": "accl",
+    "section": [
+      {
+        "typeId": 41,
+        "panel": [
+          { "typeId": 411 },
+          { "typeId": 412 },
+          {
+            "item": [
+              { "itemId": 43, "itemName": "Board - White" },
+              { "itemId": 54, "itemName": "Food - Not Allowed" },
+              { "itemId": 96, "itemName": "Seating - Fixed" }
+            ],
+            "typeId": 413
+          },
+          {
+            "item": [
+              {
+                "itemId": 4916,
+                "itemName": "Mendoza, Roxanne",
+                "custAttrId": 37,
+                "itemTypeId": 3,
+                "itemLabel": "Additional Location Scheduler"
+              }
+            ],
+            "typeId": 414
+          }
+        ]
+      },
+      {
+        "typeId": 42,
+        "panel": [
+          {
+            "item": [
+              { "itemTypeId": 4211, "capacity": 12 },
+              {
+                "itemId": 6,
+                "itemName": "As Is",
+                "isDefault": 1,
+                "imageId": 289,
+                "capacity": 12
+              }
+            ],
+            "typeId": 421
+          },
+          {
+            "item": [
+              { "itemId": 4, "itemName": "Campus - Main" },
+              { "itemId": 8, "itemName": "Schedule25 Assignable" }
+            ],
+            "typeId": 422
+          },
+          { "typeId": 423 },
+          {
+            "item": [
+              { "itemId": 2310, "itemName": "Dang, Cindy", "itemTypeId": 3 }
+            ],
+            "typeId": 424
+          },
+          { "item": [{ "itemId": 2, "itemName": "Default" }], "typeId": 425 },
+          { "item": [{ "itemId": 0, "itemName": 0 }], "typeId": 426 },
+          { "typeId": 427 },
+          {
+            "item": [
+              { "itemId": 4, "itemName": "Building 4: Biotechnology Building" }
+            ],
+            "typeName": "Building",
+            "typeId": 436
+          }
+        ]
+      }
+    ],
+    "pubdate": "2024-04-09T11:02:10-07:00"
+  }
+}

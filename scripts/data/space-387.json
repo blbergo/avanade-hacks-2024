@@ -1,0 +1,71 @@
+{
+  "spdetail": {
+    "engine": "accl",
+    "section": [
+      {
+        "typeId": 41,
+        "panel": [
+          { "typeId": 411 },
+          { "typeId": 412 },
+          {
+            "item": [{ "itemId": 53, "itemName": "Food - Allowed" }],
+            "typeId": 413
+          },
+          { "typeId": 414 }
+        ]
+      },
+      {
+        "typeId": 42,
+        "panel": [
+          {
+            "item": [
+              { "itemTypeId": 4211, "capacity": 147 },
+              {
+                "itemId": 6,
+                "itemName": "As Is",
+                "isDefault": 1,
+                "imageId": 735,
+                "capacity": 147
+              }
+            ],
+            "typeId": 421
+          },
+          {
+            "item": [
+              { "itemId": 2, "itemName": "Available For Public Use" },
+              { "itemId": 4, "itemName": "Campus - Main" },
+              { "itemId": 117, "itemName": "College - ENV" },
+              { "itemId": 21, "itemName": "Type - Gallery" }
+            ],
+            "typeId": 422
+          },
+          { "typeId": 423 },
+          {
+            "item": [
+              {
+                "itemId": 4459,
+                "itemName": "Cairella Fillmore, Michele",
+                "itemTypeId": 3
+              }
+            ],
+            "typeId": 424
+          },
+          { "typeId": 425 },
+          { "item": [{ "itemId": 0, "itemName": 0 }], "typeId": 426 },
+          { "typeId": 427 },
+          {
+            "item": [
+              {
+                "itemId": 20,
+                "itemName": "Building 35A: W. Keith and Janet Kellogg University Art Gallery"
+              }
+            ],
+            "typeName": "Building",
+            "typeId": 436
+          }
+        ]
+      }
+    ],
+    "pubdate": "2024-04-09T11:05:03-07:00"
+  }
+}

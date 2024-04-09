@@ -1,0 +1,138 @@
+{
+  "spdetail": {
+    "engine": "accl",
+    "section": [
+      {
+        "typeId": 41,
+        "panel": [
+          { "typeId": 411 },
+          { "typeId": 412 },
+          {
+            "item": [
+              { "itemId": 2, "itemName": "Access - Card" },
+              { "itemId": 4, "itemName": "ADA Accessible" },
+              { "itemId": 6, "itemName": "Air Conditioning" },
+              { "itemId": 21, "itemName": "AV - Internet - Wireless" },
+              { "itemId": 30, "itemName": "AV - Screen - Automatic" },
+              {
+                "itemId": 109,
+                "itemName": "AV - Telephone (Internal Use Only)"
+              },
+              { "itemId": 53, "itemName": "Food - Allowed" },
+              { "itemId": 92, "itemName": "Power - Outlets - Wall" },
+              { "itemId": 106, "itemName": "Windows" }
+            ],
+            "typeId": 413
+          },
+          {
+            "item": [
+              {
+                "itemId": -14,
+                "itemName": 34.056488,
+                "custAttrId": -14,
+                "itemTypeId": "F",
+                "itemLabel": "Latitude"
+              },
+              {
+                "itemId": -15,
+                "itemName": -117.824969,
+                "custAttrId": -15,
+                "itemTypeId": "F",
+                "itemLabel": "Longitude"
+              }
+            ],
+            "typeId": 414
+          }
+        ]
+      },
+      {
+        "typeId": 42,
+        "panel": [
+          {
+            "item": [
+              { "itemTypeId": 4211, "capacity": 46 },
+              {
+                "itemId": 21,
+                "itemName": "Empty",
+                "isDefault": 1,
+                "tdownTm": "PT30M",
+                "diagramImageId": 889,
+                "setupTm": "PT30M",
+                "capacity": 46
+              },
+              {
+                "itemId": 7,
+                "itemName": "Banquet",
+                "tdownTm": "PT30M",
+                "diagramImageId": 887,
+                "setupTm": "PT30M",
+                "capacity": 32
+              },
+              {
+                "itemId": 11,
+                "itemName": "Classroom Rows",
+                "tdownTm": "PT30M",
+                "diagramImageId": 888,
+                "setupTm": "PT30M",
+                "capacity": 22
+              },
+              {
+                "itemId": 12,
+                "itemName": "Cluster",
+                "tdownTm": "PT30M",
+                "diagramImageId": 884,
+                "setupTm": "PT30M",
+                "capacity": 24
+              },
+              {
+                "itemId": 33,
+                "itemName": "Theater",
+                "tdownTm": "PT30M",
+                "diagramImageId": 885,
+                "setupTm": "PT30M",
+                "capacity": 46
+              },
+              {
+                "itemId": 34,
+                "itemName": "U-Shaped",
+                "tdownTm": "PT30M",
+                "diagramImageId": 886,
+                "setupTm": "PT30M",
+                "capacity": 18
+              }
+            ],
+            "typeId": 421
+          },
+          {
+            "item": [
+              { "itemId": 2, "itemName": "Available For Public Use" },
+              { "itemId": 4, "itemName": "Campus - Main" }
+            ],
+            "typeId": 422
+          },
+          { "typeId": 423 },
+          {
+            "item": [
+              { "itemId": 85, "itemName": "Elliott, Laura", "itemTypeId": 3 }
+            ],
+            "typeId": 424
+          },
+          { "typeId": 425 },
+          { "item": [{ "itemId": 0, "itemName": 0 }], "typeId": 426 },
+          { "typeId": 427 },
+          {
+            "item": [
+              {
+                "itemId": 33,
+                "itemName": "Building 76: Kellogg West Education/Dining"
+              }
+            ],
+            "typeName": "Building",
+            "typeId": 436
+          }
+        ]
+      }
+    ],
+    "pubdate": "2024-04-09T11:05:31-07:00"
+  }
+}

@@ -1,0 +1,87 @@
+{
+  "spdetail": {
+    "engine": "accl",
+    "section": [
+      {
+        "typeId": 41,
+        "panel": [
+          {
+            "item": [
+              {
+                "itemId": 99444,
+                "itemDesc": "Only available for use outside of BSC peak hours and with permission from Associate Director of Operations."
+              }
+            ],
+            "typeId": 411
+          },
+          {
+            "item": [
+              {
+                "itemId": 99452,
+                "itemDesc": "Do not clear furniture in lounge"
+              }
+            ],
+            "typeId": 412
+          },
+          {
+            "item": [{ "itemId": 53, "itemName": "Food - Allowed" }],
+            "typeId": 413
+          },
+          { "typeId": 414 }
+        ]
+      },
+      {
+        "typeId": 42,
+        "panel": [
+          {
+            "item": [
+              { "itemTypeId": 4211, "capacity": 1 },
+              {
+                "itemId": 6,
+                "itemName": "As Is",
+                "isDefault": 1,
+                "diagramImageId": 618,
+                "instr": "Do not clear lounge",
+                "capacity": 0
+              },
+              {
+                "itemId": 22,
+                "itemName": "Exhibits",
+                "instr": "Use furniture in the lounge",
+                "capacity": 1
+              }
+            ],
+            "typeId": 421
+          },
+          {
+            "item": [
+              { "itemId": 112, "itemName": "ASI" },
+              { "itemId": 2, "itemName": "Available For Public Use" },
+              { "itemId": 4, "itemName": "Campus - Main" },
+              { "itemId": 27, "itemName": "Type - Lounge" }
+            ],
+            "typeId": 422
+          },
+          { "typeId": 423 },
+          {
+            "item": [
+              { "itemId": 73, "itemName": "Castro, Janet", "itemTypeId": 3 }
+            ],
+            "typeId": 424
+          },
+          { "typeId": 425 },
+          { "item": [{ "itemId": 0, "itemName": 0 }], "typeId": 426 },
+          { "typeId": 427 },
+          {
+            "item": [
+              { "itemId": 19, "itemName": "Building 35: Bronco Student Center" }
+            ],
+            "typeName": "Building",
+            "typeId": 436
+          }
+        ]
+      }
+    ],
+    "pubdate": "2024-04-09T11:04:45-07:00"
+  }
+}

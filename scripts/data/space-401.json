@@ -1,0 +1,102 @@
+{
+  "spdetail": {
+    "engine": "accl",
+    "section": [
+      {
+        "typeId": 41,
+        "panel": [
+          { "typeId": 411 },
+          { "typeId": 412 },
+          {
+            "item": [
+              { "itemId": 6, "itemName": "Air Conditioning" },
+              { "itemId": 49, "itemName": "Floor - Hardwoods" },
+              { "itemId": 54, "itemName": "Food - Not Allowed" },
+              { "itemId": 66, "itemName": "Lighting - Smart" },
+              { "itemId": 94, "itemName": "Seating - Bleachers" }
+            ],
+            "typeId": 413
+          },
+          { "typeId": 414 }
+        ]
+      },
+      {
+        "typeId": 42,
+        "panel": [
+          {
+            "item": [
+              { "itemTypeId": 4211, "capacity": 20 },
+              {
+                "itemId": 14,
+                "itemName": "Court - Badminton",
+                "isDefault": 1,
+                "imageId": 55,
+                "capacity": 20
+              },
+              {
+                "itemId": 15,
+                "itemName": "Court - Basketball",
+                "imageId": 56,
+                "capacity": 20
+              },
+              {
+                "itemId": 17,
+                "itemName": "Court - Table Tennis",
+                "imageId": 57,
+                "capacity": 20
+              },
+              {
+                "itemId": 18,
+                "itemName": "Court - Volleyball",
+                "imageId": 58,
+                "capacity": 20
+              }
+            ],
+            "typeId": 421
+          },
+          {
+            "item": [
+              { "itemId": 112, "itemName": "ASI" },
+              { "itemId": 2, "itemName": "Available For Public Use" },
+              { "itemId": 4, "itemName": "Campus - Main" },
+              { "itemId": 28, "itemName": "Type - Multi-Purpose" },
+              { "itemId": 35, "itemName": "Type - Recreational" }
+            ],
+            "typeId": 422
+          },
+          {
+            "item": [
+              {
+                "itemId": 755,
+                "itemName": "042 2340C-F",
+                "itemTypeId": 4,
+                "itemLabel": "Subdivision Of"
+              }
+            ],
+            "typeId": 423
+          },
+          {
+            "item": [
+              { "itemId": 5221, "itemName": "CE Desk, ASI", "itemTypeId": 3 }
+            ],
+            "typeId": 424
+          },
+          { "typeId": 425 },
+          { "item": [{ "itemId": 0, "itemName": 0 }], "typeId": 426 },
+          { "typeId": 427 },
+          {
+            "item": [
+              {
+                "itemId": 23,
+                "itemName": "Building 42: Bronco Recreation Intramural Complex (BRIC)"
+              }
+            ],
+            "typeName": "Building",
+            "typeId": 436
+          }
+        ]
+      }
+    ],
+    "pubdate": "2024-04-09T11:05:10-07:00"
+  }
+}

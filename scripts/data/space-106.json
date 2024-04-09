@@ -1,0 +1,82 @@
+{
+  "spdetail": {
+    "engine": "accl",
+    "section": [
+      {
+        "typeId": 41,
+        "panel": [
+          { "typeId": 411 },
+          {
+            "item": [
+              {
+                "itemId": 144164,
+                "itemDesc": "<p>This room is alarmed, please contact CLASS Dean's Office ext. 3947 for alarm code.</p>"
+              }
+            ],
+            "typeId": 412
+          },
+          {
+            "item": [
+              { "itemId": 3, "itemName": "Access - Key" },
+              { "itemId": 43, "itemName": "Board - White" },
+              { "itemId": 45, "itemName": "Computers - PC" },
+              { "itemId": 54, "itemName": "Food - Not Allowed" },
+              { "itemId": 111, "itemName": "Presentation Technology - Basic" },
+              { "itemId": 98, "itemName": "Seating - Tables & Chairs" }
+            ],
+            "typeId": 413
+          },
+          { "typeId": 414 }
+        ]
+      },
+      {
+        "typeId": 42,
+        "panel": [
+          {
+            "item": [
+              { "itemTypeId": 4211, "capacity": 24 },
+              {
+                "itemId": 11,
+                "itemName": "Classroom Rows",
+                "isDefault": 1,
+                "imageId": 298,
+                "capacity": 24
+              }
+            ],
+            "typeId": 421
+          },
+          {
+            "item": [
+              { "itemId": 4, "itemName": "Campus - Main" },
+              { "itemId": 120, "itemName": "College - CLASS" },
+              { "itemId": 8, "itemName": "Schedule25 Assignable" },
+              { "itemId": 15, "itemName": "Type - Computer Lab" }
+            ],
+            "typeId": 422
+          },
+          { "typeId": 423 },
+          {
+            "item": [
+              { "itemId": 6056, "itemName": "Dolan, Lydia", "itemTypeId": 3 }
+            ],
+            "typeId": 424
+          },
+          { "item": [{ "itemId": 2, "itemName": "Default" }], "typeId": 425 },
+          { "item": [{ "itemId": 0, "itemName": 0 }], "typeId": 426 },
+          { "typeId": 427 },
+          {
+            "item": [
+              {
+                "itemId": 6,
+                "itemName": "Building 5: College of Letters, Arts and Social Sciences"
+              }
+            ],
+            "typeName": "Building",
+            "typeId": 436
+          }
+        ]
+      }
+    ],
+    "pubdate": "2024-04-09T11:02:15-07:00"
+  }
+}

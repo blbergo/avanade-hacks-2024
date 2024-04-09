@@ -1,0 +1,157 @@
+{
+  "spdetail": {
+    "engine": "accl",
+    "section": [
+      {
+        "typeId": 41,
+        "panel": [
+          { "typeId": 411 },
+          { "typeId": 412 },
+          {
+            "item": [
+              { "itemId": 6, "itemName": "Air Conditioning" },
+              { "itemId": 52, "itemName": "Floor - Yoga (Pavi)" },
+              { "itemId": 54, "itemName": "Food - Not Allowed" },
+              { "itemId": 66, "itemName": "Lighting - Smart" },
+              { "itemId": 69, "itemName": "Mirrors" },
+              { "itemId": 92, "itemName": "Power - Outlets - Wall" }
+            ],
+            "typeId": 413
+          },
+          { "typeId": 414 }
+        ]
+      },
+      {
+        "typeId": 42,
+        "panel": [
+          {
+            "item": [
+              { "itemTypeId": 4211, "capacity": 47 },
+              {
+                "itemId": 6,
+                "itemName": "As Is",
+                "isDefault": 1,
+                "imageId": 39,
+                "capacity": 47
+              },
+              {
+                "itemId": 7,
+                "itemName": "Banquet",
+                "imageId": 142,
+                "diagramImageId": 99,
+                "capacity": 47
+              },
+              {
+                "itemId": 9,
+                "itemName": "Chevron",
+                "imageId": 143,
+                "diagramImageId": 100,
+                "capacity": 47
+              },
+              {
+                "itemId": 10,
+                "itemName": "Circle",
+                "imageId": 150,
+                "diagramImageId": 107,
+                "capacity": 47
+              },
+              {
+                "itemId": 11,
+                "itemName": "Classroom Rows",
+                "imageId": 144,
+                "diagramImageId": 102,
+                "capacity": 47
+              },
+              {
+                "itemId": 13,
+                "itemName": "Conference",
+                "imageId": 145,
+                "diagramImageId": 103,
+                "capacity": 47
+              },
+              {
+                "itemId": 19,
+                "itemName": "Crescent / Half Circle",
+                "imageId": 151,
+                "diagramImageId": 108,
+                "capacity": 47
+              },
+              {
+                "itemId": 23,
+                "itemName": "Hollow Square",
+                "imageId": 146,
+                "diagramImageId": 101,
+                "capacity": 47
+              },
+              {
+                "itemId": 24,
+                "itemName": "Lecture",
+                "imageId": 148,
+                "diagramImageId": 105,
+                "capacity": 47
+              },
+              {
+                "itemId": 26,
+                "itemName": "Perimeter Seating",
+                "imageId": 152,
+                "capacity": 47
+              },
+              {
+                "itemId": 32,
+                "itemName": "School Room / Theater Split",
+                "imageId": 153,
+                "capacity": 47
+              },
+              {
+                "itemId": 33,
+                "itemName": "Theater",
+                "imageId": 149,
+                "diagramImageId": 106,
+                "capacity": 47
+              },
+              {
+                "itemId": 34,
+                "itemName": "U-Shaped",
+                "imageId": 147,
+                "diagramImageId": 104,
+                "capacity": 47
+              }
+            ],
+            "typeId": 421
+          },
+          {
+            "item": [
+              { "itemId": 112, "itemName": "ASI" },
+              { "itemId": 2, "itemName": "Available For Public Use" },
+              { "itemId": 4, "itemName": "Campus - Main" },
+              { "itemId": 28, "itemName": "Type - Multi-Purpose" },
+              { "itemId": 35, "itemName": "Type - Recreational" }
+            ],
+            "typeId": 422
+          },
+          { "typeId": 423 },
+          {
+            "item": [
+              { "itemId": 5221, "itemName": "CE Desk, ASI", "itemTypeId": 3 }
+            ],
+            "typeId": 424
+          },
+          { "typeId": 425 },
+          { "item": [{ "itemId": 0, "itemName": 0 }], "typeId": 426 },
+          { "typeId": 427 },
+          {
+            "item": [
+              {
+                "itemId": 23,
+                "itemName": "Building 42: Bronco Recreation Intramural Complex (BRIC)"
+              }
+            ],
+            "typeName": "Building",
+            "typeId": 436
+          }
+        ]
+      }
+    ],
+    "pubdate": "2024-04-09T11:05:07-07:00"
+  }
+}

@@ -1,0 +1,88 @@
+{
+  "spdetail": {
+    "engine": "accl",
+    "section": [
+      {
+        "typeId": 41,
+        "panel": [
+          { "typeId": 411 },
+          { "typeId": 412 },
+          {
+            "item": [
+              { "itemId": 6, "itemName": "Air Conditioning" },
+              { "itemId": 12, "itemName": "AV - Conference Phone" },
+              { "itemId": 25, "itemName": "AV - Overhead Projector" },
+              { "itemId": 43, "itemName": "Board - White" },
+              { "itemId": 45, "itemName": "Computers - PC" },
+              { "itemId": 53, "itemName": "Food - Allowed" },
+              { "itemId": 56, "itemName": "Furniture - Conference Table" },
+              { "itemId": 62, "itemName": "Lectern" },
+              { "itemId": 65, "itemName": "Lighting - Dimmable" },
+              { "itemId": 92, "itemName": "Power - Outlets - Wall" },
+              { "itemId": 98, "itemName": "Seating - Tables & Chairs" }
+            ],
+            "typeId": 413
+          },
+          { "typeId": 414 }
+        ]
+      },
+      {
+        "typeId": 42,
+        "panel": [
+          {
+            "item": [
+              { "itemTypeId": 4211, "capacity": 12 },
+              {
+                "itemId": 6,
+                "itemName": "As Is",
+                "isDefault": 1,
+                "imageId": 42,
+                "capacity": 12
+              }
+            ],
+            "typeId": 421
+          },
+          {
+            "item": [
+              { "itemId": 112, "itemName": "ASI" },
+              { "itemId": 4, "itemName": "Campus - Main" },
+              { "itemId": 16, "itemName": "Type - Conference / Meeting Room" },
+              { "itemId": 35, "itemName": "Type - Recreational" }
+            ],
+            "typeId": 422
+          },
+          { "typeId": 423 },
+          {
+            "item": [
+              { "itemId": 5221, "itemName": "CE Desk, ASI", "itemTypeId": 3 }
+            ],
+            "typeId": 424
+          },
+          { "typeId": 425 },
+          { "item": [{ "itemId": 0, "itemName": 0 }], "typeId": 426 },
+          {
+            "item": [
+              {
+                "itemId": 80,
+                "itemName": "Express Scheduling",
+                "maxDuration": 120
+              }
+            ],
+            "typeId": 427
+          },
+          {
+            "item": [
+              {
+                "itemId": 23,
+                "itemName": "Building 42: Bronco Recreation Intramural Complex (BRIC)"
+              }
+            ],
+            "typeName": "Building",
+            "typeId": 436
+          }
+        ]
+      }
+    ],
+    "pubdate": "2024-04-09T11:05:08-07:00"
+  }
+}

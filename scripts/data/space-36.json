@@ -1,0 +1,99 @@
+{
+  "spdetail": {
+    "engine": "accl",
+    "section": [
+      {
+        "typeId": 41,
+        "panel": [
+          { "typeId": 411 },
+          { "typeId": 412 },
+          {
+            "item": [
+              { "itemId": 3, "itemName": "Access - Key" },
+              { "itemId": 41, "itemName": "Board - Chalk", "quantity": 2 },
+              { "itemId": 53, "itemName": "Food - Allowed" },
+              { "itemId": 115, "itemName": "HyFlex" },
+              {
+                "itemId": 113,
+                "itemName": "Presentation Technology - Smart Classroom - Standard"
+              },
+              { "itemId": 99, "itemName": "Seating - Tablet Arm Chairs" }
+            ],
+            "typeId": 413
+          },
+          {
+            "item": [
+              {
+                "itemId": 5233,
+                "itemName": "SELS, Student Engagement Leadership Success",
+                "custAttrId": 37,
+                "itemTypeId": 3,
+                "itemLabel": "Additional Location Scheduler"
+              },
+              {
+                "itemId": 38,
+                "itemName": 851,
+                "custAttrId": 38,
+                "itemTypeId": "N",
+                "itemLabel": "Square Footage"
+              }
+            ],
+            "typeId": 414
+          }
+        ]
+      },
+      {
+        "typeId": 42,
+        "panel": [
+          {
+            "item": [
+              { "itemTypeId": 4211, "capacity": 56 },
+              {
+                "itemId": 11,
+                "itemName": "Classroom Rows",
+                "isDefault": 1,
+                "imageId": 180,
+                "capacity": 56
+              }
+            ],
+            "typeId": 421
+          },
+          {
+            "item": [
+              { "itemId": 4, "itemName": "Campus - Main" },
+              { "itemId": 113, "itemName": "College - AG" },
+              { "itemId": 8, "itemName": "Schedule25 Assignable" },
+              { "itemId": 26, "itemName": "Type - Lecture" }
+            ],
+            "typeId": 422
+          },
+          { "typeId": 423 },
+          {
+            "item": [
+              {
+                "itemId": 5301,
+                "itemName": "Scheduling, Academic",
+                "itemTypeId": 3
+              }
+            ],
+            "typeId": 424
+          },
+          { "item": [{ "itemId": 14, "itemName": "AG 002" }], "typeId": 425 },
+          { "item": [{ "itemId": 0, "itemName": 0 }], "typeId": 426 },
+          { "typeId": 427 },
+          {
+            "item": [
+              {
+                "itemId": 2,
+                "itemName": "Building 2: Huntley College of Agriculture"
+              }
+            ],
+            "typeName": "Building",
+            "typeId": 436
+          }
+        ]
+      }
+    ],
+    "pubdate": "2024-04-09T11:01:36-07:00"
+  }
+}

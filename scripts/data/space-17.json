@@ -1,0 +1,88 @@
+{
+  "spdetail": {
+    "engine": "accl",
+    "section": [
+      {
+        "typeId": 41,
+        "panel": [
+          { "typeId": 411 },
+          {
+            "item": [
+              {
+                "itemId": 65049,
+                "itemDesc": "Room is Alarmed\nContact CLASS Dean's Office for card swipe and alarm access"
+              }
+            ],
+            "typeId": 412
+          },
+          {
+            "item": [
+              { "itemId": 3, "itemName": "Access - Key" },
+              { "itemId": 43, "itemName": "Board - White", "quantity": 2 },
+              { "itemId": 45, "itemName": "Computers - PC", "quantity": 24 },
+              { "itemId": 54, "itemName": "Food - Not Allowed" },
+              { "itemId": 111, "itemName": "Presentation Technology - Basic" },
+              { "itemId": 98, "itemName": "Seating - Tables & Chairs" }
+            ],
+            "typeId": 413
+          },
+          {
+            "item": [
+              {
+                "itemId": 38,
+                "itemName": 629,
+                "custAttrId": 38,
+                "itemTypeId": "N",
+                "itemLabel": "Square Footage"
+              }
+            ],
+            "typeId": 414
+          }
+        ]
+      },
+      {
+        "typeId": 42,
+        "panel": [
+          {
+            "item": [
+              { "itemTypeId": 4211, "capacity": 24 },
+              {
+                "itemId": 11,
+                "itemName": "Classroom Rows",
+                "isDefault": 1,
+                "imageId": 230,
+                "capacity": 24
+              }
+            ],
+            "typeId": 421
+          },
+          {
+            "item": [
+              { "itemId": 4, "itemName": "Campus - Main" },
+              { "itemId": 120, "itemName": "College - CLASS" },
+              { "itemId": 8, "itemName": "Schedule25 Assignable" },
+              { "itemId": 15, "itemName": "Type - Computer Lab" }
+            ],
+            "typeId": 422
+          },
+          { "typeId": 423 },
+          {
+            "item": [
+              { "itemId": 6056, "itemName": "Dolan, Lydia", "itemTypeId": 3 }
+            ],
+            "typeId": 424
+          },
+          { "item": [{ "itemId": 2, "itemName": "Default" }], "typeId": 425 },
+          { "item": [{ "itemId": 0, "itemName": 0 }], "typeId": 426 },
+          { "typeId": 427 },
+          {
+            "item": [{ "itemId": 1, "itemName": "Building 1: Building One" }],
+            "typeName": "Building",
+            "typeId": 436
+          }
+        ]
+      }
+    ],
+    "pubdate": "2024-04-09T11:01:28-07:00"
+  }
+}

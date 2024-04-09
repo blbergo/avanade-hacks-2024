@@ -1,0 +1,146 @@
+{
+  "spdetail": {
+    "engine": "accl",
+    "section": [
+      {
+        "typeId": 41,
+        "panel": [
+          { "typeId": 411 },
+          { "typeId": 412 },
+          {
+            "item": [
+              { "itemId": 2, "itemName": "Access - Card" },
+              { "itemId": 4, "itemName": "ADA Accessible" },
+              { "itemId": 6, "itemName": "Air Conditioning" },
+              { "itemId": 17, "itemName": "AV - Input - HDMI" },
+              { "itemId": 21, "itemName": "AV - Internet - Wireless" },
+              { "itemId": 25, "itemName": "AV - Overhead Projector" },
+              { "itemId": 30, "itemName": "AV - Screen - Automatic" },
+              { "itemId": 33, "itemName": "AV - Sound System" },
+              {
+                "itemId": 109,
+                "itemName": "AV - Telephone (Internal Use Only)"
+              },
+              { "itemId": 53, "itemName": "Food - Allowed" },
+              { "itemId": 65, "itemName": "Lighting - Dimmable" },
+              { "itemId": 82, "itemName": "Patio" },
+              { "itemId": 86, "itemName": "Podium" },
+              { "itemId": 91, "itemName": "Power - Outlets - Floor" },
+              { "itemId": 92, "itemName": "Power - Outlets - Wall" },
+              { "itemId": 103, "itemName": "Stage" },
+              { "itemId": 106, "itemName": "Windows" }
+            ],
+            "typeId": 413
+          },
+          {
+            "item": [
+              {
+                "itemId": -14,
+                "itemName": 34.056488,
+                "custAttrId": -14,
+                "itemTypeId": "F",
+                "itemLabel": "Latitude"
+              },
+              {
+                "itemId": -15,
+                "itemName": -117.824969,
+                "custAttrId": -15,
+                "itemTypeId": "F",
+                "itemLabel": "Longitude"
+              }
+            ],
+            "typeId": 414
+          }
+        ]
+      },
+      {
+        "typeId": 42,
+        "panel": [
+          {
+            "item": [
+              { "itemTypeId": 4211, "capacity": 210 },
+              {
+                "itemId": 7,
+                "itemName": "Banquet",
+                "isDefault": 1,
+                "tdownTm": "P1DT02H",
+                "diagramImageId": 883,
+                "setupTm": "PT01H",
+                "capacity": 112
+              },
+              {
+                "itemId": 11,
+                "itemName": "Classroom Rows",
+                "tdownTm": "PT02H",
+                "diagramImageId": 879,
+                "setupTm": "PT02H",
+                "capacity": 104
+              },
+              {
+                "itemId": 12,
+                "itemName": "Cluster",
+                "tdownTm": "PT02H",
+                "diagramImageId": 878,
+                "setupTm": "PT02H",
+                "capacity": 84
+              },
+              {
+                "itemId": 21,
+                "itemName": "Empty",
+                "tdownTm": "PT45M",
+                "diagramImageId": 880,
+                "setupTm": "PT45M",
+                "capacity": 210
+              },
+              {
+                "itemId": 33,
+                "itemName": "Theater",
+                "tdownTm": "PT01H",
+                "diagramImageId": 881,
+                "setupTm": "PT01H",
+                "capacity": 210
+              },
+              {
+                "itemId": 34,
+                "itemName": "U-Shaped",
+                "tdownTm": "PT45M",
+                "diagramImageId": 882,
+                "setupTm": "PT45M",
+                "capacity": 40
+              }
+            ],
+            "typeId": 421
+          },
+          {
+            "item": [
+              { "itemId": 2, "itemName": "Available For Public Use" },
+              { "itemId": 4, "itemName": "Campus - Main" }
+            ],
+            "typeId": 422
+          },
+          { "typeId": 423 },
+          {
+            "item": [
+              { "itemId": 85, "itemName": "Elliott, Laura", "itemTypeId": 3 }
+            ],
+            "typeId": 424
+          },
+          { "typeId": 425 },
+          { "item": [{ "itemId": 0, "itemName": 0 }], "typeId": 426 },
+          { "typeId": 427 },
+          {
+            "item": [
+              {
+                "itemId": 33,
+                "itemName": "Building 76: Kellogg West Education/Dining"
+              }
+            ],
+            "typeName": "Building",
+            "typeId": 436
+          }
+        ]
+      }
+    ],
+    "pubdate": "2024-04-09T11:05:30-07:00"
+  }
+}

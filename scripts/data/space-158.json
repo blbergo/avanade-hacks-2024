@@ -1,0 +1,94 @@
+{
+  "spdetail": {
+    "engine": "accl",
+    "section": [
+      {
+        "typeId": 41,
+        "panel": [
+          { "typeId": 411 },
+          { "typeId": 412 },
+          {
+            "item": [
+              { "itemId": 2, "itemName": "Access - Card" },
+              { "itemId": 3, "itemName": "Access - Key" },
+              { "itemId": 43, "itemName": "Board - White" },
+              { "itemId": 54, "itemName": "Food - Not Allowed" },
+              {
+                "itemId": 113,
+                "itemName": "Presentation Technology - Smart Classroom - Standard"
+              },
+              { "itemId": 98, "itemName": "Seating - Tables & Chairs" }
+            ],
+            "typeId": 413
+          },
+          {
+            "item": [
+              {
+                "itemId": 4,
+                "itemName": 9617,
+                "custAttrId": 4,
+                "itemTypeId": "S",
+                "itemLabel": "Phone Number"
+              },
+              {
+                "itemId": 38,
+                "itemName": 945,
+                "custAttrId": 38,
+                "itemTypeId": "N",
+                "itemLabel": "Square Footage"
+              }
+            ],
+            "typeId": 414
+          }
+        ]
+      },
+      {
+        "typeId": 42,
+        "panel": [
+          {
+            "item": [
+              { "itemTypeId": 4211, "capacity": 24 },
+              {
+                "itemId": 11,
+                "itemName": "Classroom Rows",
+                "isDefault": 1,
+                "imageId": 328,
+                "capacity": 24
+              }
+            ],
+            "typeId": 421
+          },
+          {
+            "item": [
+              { "itemId": 4, "itemName": "Campus - Main" },
+              { "itemId": 117, "itemName": "College - ENV" },
+              { "itemId": 8, "itemName": "Schedule25 Assignable" }
+            ],
+            "typeId": 422
+          },
+          { "typeId": 423 },
+          {
+            "item": [
+              { "itemId": 6056, "itemName": "Dolan, Lydia", "itemTypeId": 3 }
+            ],
+            "typeId": 424
+          },
+          { "item": [{ "itemId": 2, "itemName": "Default" }], "typeId": 425 },
+          { "item": [{ "itemId": 0, "itemName": 0 }], "typeId": 426 },
+          { "typeId": 427 },
+          {
+            "item": [
+              {
+                "itemId": 8,
+                "itemName": "Building 7: College of Environmental Design"
+              }
+            ],
+            "typeName": "Building",
+            "typeId": 436
+          }
+        ]
+      }
+    ],
+    "pubdate": "2024-04-09T11:02:44-07:00"
+  }
+}
