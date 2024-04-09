@@ -1,1 +1,5 @@
 wget
+pqdm
+langchain
+sentence-transformers
+chromadb
