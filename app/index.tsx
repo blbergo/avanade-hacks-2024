@@ -1,18 +1,15 @@
 import { Link } from "expo-router";
 import { View, Text } from "react-native";
+import { SafeAreaView } from "react-native-safe-area-context";
 
 export default function Home() {
   return (
-    <View className="bg-green-500 w-full min-h-screen flex flex-col items-center justify-center">
-      <Text>
-        Hello, world! The background should be green, and this text should be
-        centered, hopefully.
-      </Text>
-      <Text>
-        <Link push href={"/chat/"} className="text-blue-500">
-          Chat
-        </Link>
-      </Text>
-    </View>
+    <SafeAreaView className="flex">
+      <View className="w-full h-full flex items-center justify-center gap-15">
+        <Text>Appstack</Text>
+        <Link href="./signin">Sign in</Link>
+        <Link href="./signup">Sign up</Link>
+      </View>
+    </SafeAreaView>
   );
 }
