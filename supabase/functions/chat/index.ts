@@ -4,11 +4,11 @@
 
 import { corsHeaders } from "../_shared/cors.ts";
 import { supabaseClient } from "../_shared/client.ts";
-import { MemoryVectorStore } from "langchain/vectorstores/memory";
-import { GoogleGenerativeAIEmbeddings } from "@langchain/google-genai";
-import { Document } from "https://esm.sh/v135/@langchain/core@0.1.55/documents.js";
+
 import { PromptTemplate } from "langchain/prompts";
 import { LLMChain } from "langchain/chains";
+import { ChatGoogleGenerativeAI } from "@langchain/google-genai";
+import { getVectorStore } from "./embeddings.ts";
 
 Deno.serve(async (req) => {
   if (req.method === "OPTIONS") {
@@ -17,35 +17,46 @@ Deno.serve(async (req) => {
     });
   }
 
-  const client = supabaseClient(req);
   const { message } = await req.json();
 
-  // get the emmbeddings
-  const { data: documents, error: documentError } = await client
-    .from("langchain_pg_embedding")
-    .select("document");
+  const client = supabaseClient(req);
 
-  const docs: Document[] = [];
+  const vectorStore = await getVectorStore(client);
+  const retriever = vectorStore.asRetriever();
 
-  for (const document of documents!) {
-    docs.push(
-      new Document({
-        pageContent: document.document!,
-      }),
-    );
-  }
-
-  const vectorStore = await MemoryVectorStore.fromDocuments(
-    docs,
-    new GoogleGenerativeAIEmbeddings(),
-    {},
-  );
-
-  const res = await vectorStore.similaritySearch(message);
-
-  return new Response(JSON.stringify(res), {
-    headers: { "Content-Type": "application/json" },
+  const template =
+    "The user is trying to book a venue on campus. Specifically, they are asking you {message}. Here is the most similar database records: {data}. Help them choose the best one.";
+  const promptTemplate = new PromptTemplate({
+    template,
+    inputVariables: ["message", "data"],
   });
+
+  const geminiModel = new ChatGoogleGenerativeAI({
+    modelName: "gemini-pro",
+    apiKey: Deno.env.get("GOOGLE_API_KEY")!,
+  });
+
+  const llmChain = new LLMChain({
+    llm: geminiModel,
+    prompt: promptTemplate,
+  });
+
+  const data = JSON.stringify(await retriever.getRelevantDocuments(message));
+
+  const res = await llmChain.call({
+    message,
+    data,
+  });
+
+  return new Response(
+    JSON.stringify({
+      message: res,
+      data,
+    }),
+    {
+      headers: { "Content-Type": "application/json" },
+    },
+  );
 });
 
 /* To invoke locally:
