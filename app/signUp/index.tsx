@@ -14,7 +14,7 @@ export default function AuthSignUp() {
   const addUserToUsers = (user: any) => {
     supabase
       .from("users")
-      .insert({ id: 1, created_at: user.created_at, uuid: user.id })
+      .insert([{ created_at: user.created_at, uuid: user.id }])
       .then((res: any) => {
         const { error } = res;
         if (error) {
@@ -39,7 +39,6 @@ export default function AuthSignUp() {
         if (error) {
           console.log(error);
         } else {
-          console.log(user);
           addUserToUsers(user);
         }
       });
