@@ -1,4 +1,4 @@
-from langchain.document_loaders import DirectoryLoader, TextLoader
+from langchain.document_loaders import DirectoryLoader, JSONLoader, TextLoader
 from langchain_community.vectorstores import Chroma
 from langchain_community.embeddings.sentence_transformer import (
     SentenceTransformerEmbeddings,
@@ -24,9 +24,13 @@ for doc in docs:
     
     data.append(res)
     
-loader = TextLoader(data)
-docs = loader.load()
 
 embedding_function = SentenceTransformerEmbeddings(model_name="all-MiniLM-L6-v2")
+
+with open("processed/serialized.json", "w") as f:
+    json.dump(data, f)
+
+loader = JSONLoader("processed/serialized.json", jq_schema=".", text_content=False)
+docs = loader.load()
 
 db2 = Chroma.from_documents(docs, embedding_function, persist_directory="./chroma_db")
