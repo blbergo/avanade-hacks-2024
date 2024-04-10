@@ -4,6 +4,7 @@ import { useHeaderHeight } from "@react-navigation/elements";
 import Chatbar from "@/components/Chatbar";
 import Messages from "@/components/Messages";
 import { MessageProps } from "@/components/Message";
+import { View } from "react-native";
 
 export default function Chat() {
   const headerHeight = useHeaderHeight();
@@ -34,13 +35,16 @@ export default function Chat() {
   };
 
   return (
-    <SafeAreaView className="flex flex-col h-full justify-end bg-end">
+    <SafeAreaView className="flex flex-col h-full bg-end">
       <KeyboardAvoidingView
         keyboardVerticalOffset={headerHeight}
         behavior={Platform.OS === "ios" ? "padding" : "height"}
       >
-        <Messages messages={messsages} />
-        <Chatbar onSendMessage={handleSendMessage} />
+        {/* TODO: fix scrolling behavior */}
+        <View className="flex flex-col flex-grow h-full">
+          <Messages messages={messsages} />
+          <Chatbar onSendMessage={handleSendMessage} />
+        </View>
       </KeyboardAvoidingView>
     </SafeAreaView>
   );

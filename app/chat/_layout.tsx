@@ -9,6 +9,7 @@ export default function Layout() {
         screenOptions={{
           headerStyle: {
             backgroundColor: "#434343",
+            height: 120,
           },
           headerTintColor: "#ffffff",
         }}

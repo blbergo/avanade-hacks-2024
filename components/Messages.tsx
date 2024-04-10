@@ -6,7 +6,7 @@ interface MessagesProps {
 }
 export default function Messages({ messages }: MessagesProps) {
   return (
-    <View className="flex flex-col">
+    <View className="flex flex-col flex-grow mt-5">
       {messages.map((item) => {
         return (
           <Message
