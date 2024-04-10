@@ -1,15 +1,11 @@
 import { View, Text, TextInput, Pressable } from "react-native";
 import React, { useState } from "react";
 import { supabase } from "@/utils/supabase";
-import { Link } from "expo-router";
-import { ParamListBase, useNavigation } from "@react-navigation/native";
-import { NativeStackNavigationProp } from "@react-navigation/native-stack";
+import { router } from "expo-router";
 
-export default function AuthSignUp() {
+export default function SignUp() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-
-  /* const navigation = useNavigation<NativeStackNavigationProp<ParamListBase>>(); */
 
   const addUserToUsers = (user: any) => {
     supabase
@@ -40,10 +36,9 @@ export default function AuthSignUp() {
           console.log(error);
         } else {
           addUserToUsers(user);
+          router.push("../chat");
         }
       });
-
-    /* navigation.navigate('signIn') */
   };
 
   return (
@@ -65,7 +60,13 @@ export default function AuthSignUp() {
         </Pressable>
       </View>
       <View>
-        <Link href="../signIn">Sign In Page</Link>
+        <Pressable
+          onPress={() => {
+            router.back();
+          }}
+        >
+          <Text>Sign In Page</Text>
+        </Pressable>
       </View>
     </View>
   );

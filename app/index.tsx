@@ -1,11 +1,10 @@
-import { Link } from "expo-router";
-import { View, Text } from "react-native";
+import { View } from "react-native";
+import SignIn from "./signIn";
 
-export default function AppStack() {
+export default function App() {
   return (
-    <View className="bg-green-500 w-full min-h-screen flex flex-col items-center justify-center">
-      <Text>appstack</Text>
-      <Link href="./signIn">Sign In</Link>
+    <View>
+      <SignIn />
     </View>
   );
 }
