@@ -5,7 +5,6 @@ import {
   TextInput,
   SafeAreaView,
   ScrollView,
-  StyleSheet,
 } from "react-native";
 import { AntDesign } from "@expo/vector-icons";
 import { LinearGradient } from "expo-linear-gradient";
