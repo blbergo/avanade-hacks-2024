@@ -3,3 +3,6 @@ pqdm
 langchain
 sentence-transformers
 chromadb
+pgvector
+tiktoken
+psycopg2-binary
