@@ -14,7 +14,7 @@ export default function Signin() {
     <LinearGradient
       colors={["#4D4D4D", "#1C1C1C"]}
       start={{ x: 0.7, y: 0 }}
-      end={{ x: 0.3, y: 0.8 }}
+      end={{ x: 0.3, y: 0.7 }}
     >
       <SafeAreaView className="flex">
         <ScrollView
