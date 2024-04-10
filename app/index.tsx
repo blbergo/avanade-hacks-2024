@@ -1,3 +1,4 @@
+import { Link } from "expo-router";
 import { View, Text } from "react-native";
 
 export default function Home() {
@@ -6,6 +7,11 @@ export default function Home() {
       <Text>
         Hello, world! The background should be green, and this text should be
         centered, hopefully.
+      </Text>
+      <Text>
+        <Link push href={"/chat/"} className="text-blue-500">
+          Chat
+        </Link>
       </Text>
     </View>
   );
