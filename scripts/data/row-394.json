@@ -1,0 +1,115 @@
+{
+  "page": 394,
+  "rows": [
+    {
+      "pages": 865,
+      "count": 865,
+      "contextId": 359,
+      "row": [
+        {
+          "templateType": 5,
+          "itemId": 359,
+          "itemName": "035 2122",
+          "itemTypeId": 4
+        },
+        "BSC ASI Administration Conference Room",
+        "ASI, Available For Public Use, Campus - Main, Type - Conference / Meeting Room",
+        "",
+        "",
+        8,
+        8,
+        {
+          "templateType": 41,
+          "itemId": 19,
+          "itemName": "Building 35: Bronco Student Center",
+          "itemTypeId": 41
+        }
+      ]
+    }
+  ],
+  "cols": [
+    {
+      "isPermanent": 1,
+      "isDateTime": 0,
+      "name": "Name",
+      "isDate": 0,
+      "prefname": "name",
+      "isVisible": 1,
+      "sortable": 1,
+      "isTime": 0,
+      "order": "asc"
+    },
+    {
+      "isPermanent": 0,
+      "isDateTime": 0,
+      "name": "Formal Name",
+      "isDate": 0,
+      "prefname": "formal_name",
+      "isVisible": 1,
+      "sortable": 1,
+      "isTime": 0
+    },
+    {
+      "isPermanent": 0,
+      "isDateTime": 0,
+      "name": "Categories",
+      "isDate": 0,
+      "prefname": "categories",
+      "isVisible": 1,
+      "sortable": 0,
+      "isTime": 0
+    },
+    {
+      "isPermanent": 0,
+      "isDateTime": 0,
+      "name": "Features",
+      "isDate": 0,
+      "prefname": "features",
+      "isVisible": 1,
+      "sortable": 0,
+      "isTime": 0
+    },
+    {
+      "isPermanent": 0,
+      "isDateTime": 0,
+      "name": "Layouts",
+      "isDate": 0,
+      "prefname": "layouts",
+      "isVisible": 1,
+      "sortable": 0,
+      "isTime": 0
+    },
+    {
+      "isPermanent": 0,
+      "isDateTime": 0,
+      "name": "Max Capacity",
+      "isDate": 0,
+      "prefname": "max_capacity",
+      "isVisible": 1,
+      "sortable": 1,
+      "isTime": 0
+    },
+    {
+      "isPermanent": 0,
+      "isDateTime": 0,
+      "name": "Default Capacity",
+      "isDate": 0,
+      "prefname": "default_capacity",
+      "isVisible": 1,
+      "sortable": 0,
+      "isTime": 0
+    },
+    {
+      "isPermanent": 0,
+      "isDateTime": 0,
+      "name": "Building",
+      "isDate": 0,
+      "prefname": "bldg_name",
+      "isVisible": 1,
+      "sortable": 1,
+      "isTime": 0
+    }
+  ],
+  "cacheId": 13641,
+  "page_size": 1
+}

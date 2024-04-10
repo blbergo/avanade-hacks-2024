@@ -1,0 +1,115 @@
+{
+  "page": 99,
+  "rows": [
+    {
+      "pages": 865,
+      "count": 865,
+      "contextId": 96,
+      "row": [
+        {
+          "templateType": 5,
+          "itemId": 96,
+          "itemName": "004 A608",
+          "itemTypeId": 4
+        },
+        "004 A608 - Geology u.d. Lab",
+        "Campus - Main, Schedule25 Assignable",
+        "Access - Key, Board - Chalk, Food - Not Allowed, HyFlex, Presentation Technology - Smart Classroom - Standard, Seating - Tables & Chairs",
+        "Classroom Rows",
+        24,
+        24,
+        {
+          "templateType": 41,
+          "itemId": 4,
+          "itemName": "Building 4: Biotechnology Building",
+          "itemTypeId": 41
+        }
+      ]
+    }
+  ],
+  "cols": [
+    {
+      "isPermanent": 1,
+      "isDateTime": 0,
+      "name": "Name",
+      "isDate": 0,
+      "prefname": "name",
+      "isVisible": 1,
+      "sortable": 1,
+      "isTime": 0,
+      "order": "asc"
+    },
+    {
+      "isPermanent": 0,
+      "isDateTime": 0,
+      "name": "Formal Name",
+      "isDate": 0,
+      "prefname": "formal_name",
+      "isVisible": 1,
+      "sortable": 1,
+      "isTime": 0
+    },
+    {
+      "isPermanent": 0,
+      "isDateTime": 0,
+      "name": "Categories",
+      "isDate": 0,
+      "prefname": "categories",
+      "isVisible": 1,
+      "sortable": 0,
+      "isTime": 0
+    },
+    {
+      "isPermanent": 0,
+      "isDateTime": 0,
+      "name": "Features",
+      "isDate": 0,
+      "prefname": "features",
+      "isVisible": 1,
+      "sortable": 0,
+      "isTime": 0
+    },
+    {
+      "isPermanent": 0,
+      "isDateTime": 0,
+      "name": "Layouts",
+      "isDate": 0,
+      "prefname": "layouts",
+      "isVisible": 1,
+      "sortable": 0,
+      "isTime": 0
+    },
+    {
+      "isPermanent": 0,
+      "isDateTime": 0,
+      "name": "Max Capacity",
+      "isDate": 0,
+      "prefname": "max_capacity",
+      "isVisible": 1,
+      "sortable": 1,
+      "isTime": 0
+    },
+    {
+      "isPermanent": 0,
+      "isDateTime": 0,
+      "name": "Default Capacity",
+      "isDate": 0,
+      "prefname": "default_capacity",
+      "isVisible": 1,
+      "sortable": 0,
+      "isTime": 0
+    },
+    {
+      "isPermanent": 0,
+      "isDateTime": 0,
+      "name": "Building",
+      "isDate": 0,
+      "prefname": "bldg_name",
+      "isVisible": 1,
+      "sortable": 1,
+      "isTime": 0
+    }
+  ],
+  "cacheId": 13489,
+  "page_size": 1
+}

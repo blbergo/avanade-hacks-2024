@@ -1,0 +1,115 @@
+{
+  "page": 349,
+  "rows": [
+    {
+      "pages": 865,
+      "count": 865,
+      "contextId": 316,
+      "row": [
+        {
+          "templateType": 5,
+          "itemId": 316,
+          "itemName": "024 0101",
+          "itemTypeId": 4
+        },
+        "024 0101 - Choral/Performance Room",
+        "Campus - Main, College - CLASS, Schedule25 Assignable, Type - Performance Space",
+        "Access - Key, Board - White, Food - Allowed, Piano - Grand Piano, Presentation Technology - Basic, Seating - Tablet Arm Chairs, Seating - Tiered",
+        "Classroom Rows",
+        112,
+        112,
+        {
+          "templateType": 41,
+          "itemId": 14,
+          "itemName": "Building 24: Music",
+          "itemTypeId": 41
+        }
+      ]
+    }
+  ],
+  "cols": [
+    {
+      "isPermanent": 1,
+      "isDateTime": 0,
+      "name": "Name",
+      "isDate": 0,
+      "prefname": "name",
+      "isVisible": 1,
+      "sortable": 1,
+      "isTime": 0,
+      "order": "asc"
+    },
+    {
+      "isPermanent": 0,
+      "isDateTime": 0,
+      "name": "Formal Name",
+      "isDate": 0,
+      "prefname": "formal_name",
+      "isVisible": 1,
+      "sortable": 1,
+      "isTime": 0
+    },
+    {
+      "isPermanent": 0,
+      "isDateTime": 0,
+      "name": "Categories",
+      "isDate": 0,
+      "prefname": "categories",
+      "isVisible": 1,
+      "sortable": 0,
+      "isTime": 0
+    },
+    {
+      "isPermanent": 0,
+      "isDateTime": 0,
+      "name": "Features",
+      "isDate": 0,
+      "prefname": "features",
+      "isVisible": 1,
+      "sortable": 0,
+      "isTime": 0
+    },
+    {
+      "isPermanent": 0,
+      "isDateTime": 0,
+      "name": "Layouts",
+      "isDate": 0,
+      "prefname": "layouts",
+      "isVisible": 1,
+      "sortable": 0,
+      "isTime": 0
+    },
+    {
+      "isPermanent": 0,
+      "isDateTime": 0,
+      "name": "Max Capacity",
+      "isDate": 0,
+      "prefname": "max_capacity",
+      "isVisible": 1,
+      "sortable": 1,
+      "isTime": 0
+    },
+    {
+      "isPermanent": 0,
+      "isDateTime": 0,
+      "name": "Default Capacity",
+      "isDate": 0,
+      "prefname": "default_capacity",
+      "isVisible": 1,
+      "sortable": 0,
+      "isTime": 0
+    },
+    {
+      "isPermanent": 0,
+      "isDateTime": 0,
+      "name": "Building",
+      "isDate": 0,
+      "prefname": "bldg_name",
+      "isVisible": 1,
+      "sortable": 1,
+      "isTime": 0
+    }
+  ],
+  "cacheId": 13617,
+  "page_size": 1
+}

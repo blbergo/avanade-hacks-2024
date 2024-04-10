@@ -1,0 +1,115 @@
+{
+  "page": 298,
+  "rows": [
+    {
+      "pages": 865,
+      "count": 865,
+      "contextId": 785,
+      "row": [
+        {
+          "templateType": 5,
+          "itemId": 785,
+          "itemName": "015 2907",
+          "itemTypeId": 4
+        },
+        "015 2907 - Library Non-Classroom",
+        "Campus - Main, Type - Computer Lab",
+        "Access - Card, Air Conditioning, AV - Data Projector, AV - Instructor Station, AV - Internet - Wired, AV - Internet - Wireless, AV - Overhead Projector, AV - Screen - Automatic, Board - White, Computers - PC, Food - Not Allowed, HyFlex, Power - Outlets - Wall, Presentation Technology - Smart Classroom - Standard, Seating - Tables & Chairs, Windows",
+        "Classroom Rows",
+        58,
+        58,
+        {
+          "templateType": 41,
+          "itemId": 12,
+          "itemName": "Building 15: Library",
+          "itemTypeId": 41
+        }
+      ]
+    }
+  ],
+  "cols": [
+    {
+      "isPermanent": 1,
+      "isDateTime": 0,
+      "name": "Name",
+      "isDate": 0,
+      "prefname": "name",
+      "isVisible": 1,
+      "sortable": 1,
+      "isTime": 0,
+      "order": "asc"
+    },
+    {
+      "isPermanent": 0,
+      "isDateTime": 0,
+      "name": "Formal Name",
+      "isDate": 0,
+      "prefname": "formal_name",
+      "isVisible": 1,
+      "sortable": 1,
+      "isTime": 0
+    },
+    {
+      "isPermanent": 0,
+      "isDateTime": 0,
+      "name": "Categories",
+      "isDate": 0,
+      "prefname": "categories",
+      "isVisible": 1,
+      "sortable": 0,
+      "isTime": 0
+    },
+    {
+      "isPermanent": 0,
+      "isDateTime": 0,
+      "name": "Features",
+      "isDate": 0,
+      "prefname": "features",
+      "isVisible": 1,
+      "sortable": 0,
+      "isTime": 0
+    },
+    {
+      "isPermanent": 0,
+      "isDateTime": 0,
+      "name": "Layouts",
+      "isDate": 0,
+      "prefname": "layouts",
+      "isVisible": 1,
+      "sortable": 0,
+      "isTime": 0
+    },
+    {
+      "isPermanent": 0,
+      "isDateTime": 0,
+      "name": "Max Capacity",
+      "isDate": 0,
+      "prefname": "max_capacity",
+      "isVisible": 1,
+      "sortable": 1,
+      "isTime": 0
+    },
+    {
+      "isPermanent": 0,
+      "isDateTime": 0,
+      "name": "Default Capacity",
+      "isDate": 0,
+      "prefname": "default_capacity",
+      "isVisible": 1,
+      "sortable": 0,
+      "isTime": 0
+    },
+    {
+      "isPermanent": 0,
+      "isDateTime": 0,
+      "name": "Building",
+      "isDate": 0,
+      "prefname": "bldg_name",
+      "isVisible": 1,
+      "sortable": 1,
+      "isTime": 0
+    }
+  ],
+  "cacheId": 13592,
+  "page_size": 1
+}

@@ -1,0 +1,115 @@
+{
+  "page": 539,
+  "rows": [
+    {
+      "pages": 865,
+      "count": 865,
+      "contextId": 454,
+      "row": [
+        {
+          "templateType": 5,
+          "itemId": 454,
+          "itemName": "076 0224C",
+          "itemTypeId": 4
+        },
+        "Dining Room C",
+        "Available For Public Use, Campus - Main",
+        "ADA Accessible, Air Conditioning, AV - Internet - Wireless, Power - Outlets - Floor, Windows",
+        "Banquet",
+        48,
+        48,
+        {
+          "templateType": 41,
+          "itemId": 33,
+          "itemName": "Building 76: Kellogg West Education/Dining",
+          "itemTypeId": 41
+        }
+      ]
+    }
+  ],
+  "cols": [
+    {
+      "isPermanent": 1,
+      "isDateTime": 0,
+      "name": "Name",
+      "isDate": 0,
+      "prefname": "name",
+      "isVisible": 1,
+      "sortable": 1,
+      "isTime": 0,
+      "order": "asc"
+    },
+    {
+      "isPermanent": 0,
+      "isDateTime": 0,
+      "name": "Formal Name",
+      "isDate": 0,
+      "prefname": "formal_name",
+      "isVisible": 1,
+      "sortable": 1,
+      "isTime": 0
+    },
+    {
+      "isPermanent": 0,
+      "isDateTime": 0,
+      "name": "Categories",
+      "isDate": 0,
+      "prefname": "categories",
+      "isVisible": 1,
+      "sortable": 0,
+      "isTime": 0
+    },
+    {
+      "isPermanent": 0,
+      "isDateTime": 0,
+      "name": "Features",
+      "isDate": 0,
+      "prefname": "features",
+      "isVisible": 1,
+      "sortable": 0,
+      "isTime": 0
+    },
+    {
+      "isPermanent": 0,
+      "isDateTime": 0,
+      "name": "Layouts",
+      "isDate": 0,
+      "prefname": "layouts",
+      "isVisible": 1,
+      "sortable": 0,
+      "isTime": 0
+    },
+    {
+      "isPermanent": 0,
+      "isDateTime": 0,
+      "name": "Max Capacity",
+      "isDate": 0,
+      "prefname": "max_capacity",
+      "isVisible": 1,
+      "sortable": 1,
+      "isTime": 0
+    },
+    {
+      "isPermanent": 0,
+      "isDateTime": 0,
+      "name": "Default Capacity",
+      "isDate": 0,
+      "prefname": "default_capacity",
+      "isVisible": 1,
+      "sortable": 0,
+      "isTime": 0
+    },
+    {
+      "isPermanent": 0,
+      "isDateTime": 0,
+      "name": "Building",
+      "isDate": 0,
+      "prefname": "bldg_name",
+      "isVisible": 1,
+      "sortable": 1,
+      "isTime": 0
+    }
+  ],
+  "cacheId": 13714,
+  "page_size": 1
+}
