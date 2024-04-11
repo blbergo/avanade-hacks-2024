@@ -12,10 +12,21 @@ import { LinearGradient } from "expo-linear-gradient";
 
 import { supabase } from "@/utils/supabase";
 import { router } from "expo-router";
+//import GoogleAuth from "@/components/GoogleAuth";
 
 export default function SignIn() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+
+  const loginWithGoogleAuth = /* async */ () => {
+    /* const { data, error } = await supabase.auth.signInWithOAuth({ provider: 'google' })
+
+    if (error) {
+      console.log(error);
+    } else {
+      router.push("../chat");
+    } */
+  };
 
   const loginUser = async () => {
     const {
@@ -94,12 +105,13 @@ export default function SignIn() {
               <View className="w-full h-[.5px] bg-secondary my-[32px]" />
 
               {/* Google Sign In Button */}
-              <Pressable className="bg-offwhite flex flex-row items-center justify-center gap-[8px] py-[10px] rounded-xl active:opacity-60">
+              {/* <Pressable className="bg-offwhite flex flex-row items-center justify-center gap-[8px] py-[10px] rounded-xl active:opacity-60"
+                onPress={() => {router.push("https://neczivukhbelfcbjggip.supabase.co/auth/v1/authorize?provider=google&redirect_to=http://localhost:3000/welcome")}}>
                 <AntDesign name="google" size={20} color="text" />
                 <Text className="text-primary text-lg font-medium">
                   Sign In With Google
                 </Text>
-              </Pressable>
+              </Pressable>  */}
 
               {/* Footer Link */}
               <Pressable

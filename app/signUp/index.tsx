@@ -119,12 +119,12 @@ export default function SignUp() {
               <View className="w-full h-[.5px] bg-secondary my-[32px]" />
 
               {/* Google Sign In Button */}
-              <Pressable className="bg-offwhite flex flex-row items-center justify-center gap-[8px] py-[10px] rounded-xl active:opacity-60">
+              {/* <Pressable className="bg-offwhite flex flex-row items-center justify-center gap-[8px] py-[10px] rounded-xl active:opacity-60">
                 <AntDesign name="google" size={20} color="text" />
                 <Text className="text-primary text-lg font-medium">
                   Sign Up With Google
                 </Text>
-              </Pressable>
+              </Pressable> */}
 
               {/* Footer Link */}
               <Pressable
