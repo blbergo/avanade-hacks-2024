@@ -12,9 +12,10 @@ import { LinearGradient } from "expo-linear-gradient";
 import Chatbar from "@/components/Chatbar";
 import Messages from "@/components/Messages";
 import { MessageProps } from "@/components/Message";
+import RoomButton, { RoomButtonProps } from "@/components/RoomButton";
 
 export default function ChatPage() {
-  const [messages, setMessages] = useState<MessageProps[]>([
+  const [messages, setMessages] = useState<(MessageProps | RoomButtonProps)[]>([
     {
       messageid: 1,
       message: "Hello",
@@ -35,6 +36,23 @@ export default function ChatPage() {
         timestamp: Date.now(),
         profilePic:
           "https://upload.wikimedia.org/wikipedia/commons/f/f0/Everest_North_Face_toward_Base_Camp_Tibet_Luca_Galuzzi_2006_edit_1.jpg",
+      },
+    ]);
+  };
+
+  const handleAddRoomButton = () => {
+    setMessages([
+      ...messages,
+      {
+        roomnumber: "006 0104",
+        name: "ppee pee poo poo fortnite among us balls gay sex",
+        type: "Lecture",
+        capacity: 45,
+      },
+      {
+        roomnumber: "005 0122",
+        type: "Computer Lab",
+        capacity: 24,
       },
     ]);
   };
@@ -61,7 +79,10 @@ export default function ChatPage() {
 
               <Text className="text-offwhite text-xl font-medium">26Live</Text>
 
-              <Pressable className="p-3 rounded-3 active:opacity-60">
+              <Pressable
+                className="p-3 rounded-3 active:opacity-60"
+                onPress={handleAddRoomButton}
+              >
                 <Entypo name="new-message" size={24} color="#F2F2F2" />
               </Pressable>
             </View>

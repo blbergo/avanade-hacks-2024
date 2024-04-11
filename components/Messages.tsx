@@ -1,9 +1,10 @@
 import React, { useRef, useEffect } from "react";
 import { FlatList } from "react-native";
 import Message, { MessageProps } from "./Message";
+import RoomButton, { RoomButtonProps } from "./RoomButton";
 
 interface MessagesProps {
-  messages: MessageProps[];
+  messages: (MessageProps | RoomButtonProps)[];
 }
 
 const Messages: React.FC<MessagesProps> = ({ messages }) => {
@@ -14,11 +15,9 @@ const Messages: React.FC<MessagesProps> = ({ messages }) => {
     flatListRef.current?.scrollToEnd();
   }, [messages]);
 
-  return (
-    <FlatList
-      ref={flatListRef}
-      data={messages}
-      renderItem={({ item }) => (
+  const renderItem = ({ item }: { item: MessageProps | RoomButtonProps }) => {
+    if ("messageid" in item) {
+      return (
         <Message
           messageid={item.messageid}
           message={item.message}
@@ -26,8 +25,25 @@ const Messages: React.FC<MessagesProps> = ({ messages }) => {
           timestamp={item.timestamp}
           profilePic={item.profilePic}
         />
-      )}
-      keyExtractor={(item) => item.messageid.toString()}
+      );
+    } else {
+      return (
+        <RoomButton
+          roomnumber={item.roomnumber}
+          name={item.name}
+          type={item.type}
+          capacity={item.capacity}
+        />
+      );
+    }
+  };
+
+  return (
+    <FlatList
+      ref={flatListRef}
+      data={messages}
+      renderItem={renderItem}
+      keyExtractor={(item, index) => index.toString()}
       style={{ flex: 1 }}
       onContentSizeChange={() => flatListRef.current?.scrollToEnd()}
       onLayout={() => flatListRef.current?.scrollToEnd()}
