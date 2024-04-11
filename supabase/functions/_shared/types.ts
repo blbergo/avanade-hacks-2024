@@ -9,6 +9,27 @@ export type Json =
 export type Database = {
   public: {
     Tables: {
+      chats: {
+        Row: {
+          chat_id: number | null;
+          created_at: string;
+          id: number;
+          messages: Json | null;
+        };
+        Insert: {
+          chat_id?: number | null;
+          created_at?: string;
+          id?: number;
+          messages?: Json | null;
+        };
+        Update: {
+          chat_id?: number | null;
+          created_at?: string;
+          id?: number;
+          messages?: Json | null;
+        };
+        Relationships: [];
+      };
       langchain_pg_collection: {
         Row: {
           cmetadata: Json | null;
@@ -58,6 +79,38 @@ export type Database = {
             columns: ["collection_id"];
             isOneToOne: false;
             referencedRelation: "langchain_pg_collection";
+            referencedColumns: ["uuid"];
+          },
+        ];
+      };
+      sessions: {
+        Row: {
+          created_at: string;
+          messages: Json | null;
+          session_id: number;
+          session_name: string;
+          user_id: string;
+        };
+        Insert: {
+          created_at?: string;
+          messages?: Json | null;
+          session_id?: number;
+          session_name: string;
+          user_id?: string;
+        };
+        Update: {
+          created_at?: string;
+          messages?: Json | null;
+          session_id?: number;
+          session_name?: string;
+          user_id?: string;
+        };
+        Relationships: [
+          {
+            foreignKeyName: "public_sessions_user_id_fkey";
+            columns: ["user_id"];
+            isOneToOne: false;
+            referencedRelation: "users";
             referencedColumns: ["uuid"];
           },
         ];

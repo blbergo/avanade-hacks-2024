@@ -90,7 +90,7 @@ Deno.serve(async (req) => {
 
   const parser = StructuredOutputParser.fromNamesAndDescriptions({
     record: {
-      capicty: "The capacity of the venue",
+      capacity: "The capacity of the venue",
       max_capacity: "The maximum capacity of the venue",
       building: "The building where the venue is located",
       features: "The features and ammenities of the venue",
@@ -98,6 +98,7 @@ Deno.serve(async (req) => {
       name: "The name of the venue",
     },
     message: "Your response to the conversation",
+    shouldShowRecord: "whether the user wants to reserve a venue",
   });
 
   // TODO:create the conversation chain
@@ -107,14 +108,9 @@ Deno.serve(async (req) => {
     format_instructions: parser.getFormatInstructions(),
   });
 
-  return new Response(
-    JSON.stringify({
-      res,
-    }),
-    {
-      headers: { "Content-Type": "application/json" },
-    },
-  );
+  return new Response(JSON.stringify(res), {
+    headers: { "Content-Type": "application/json" },
+  });
 });
 
 /* To invoke locally:

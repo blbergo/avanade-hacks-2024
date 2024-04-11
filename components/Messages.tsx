@@ -23,7 +23,6 @@ const Messages: React.FC<MessagesProps> = ({ messages }) => {
           message={item.message}
           sender={item.sender}
           timestamp={item.timestamp}
-          profilePic={item.profilePic}
         />
       );
     } else {

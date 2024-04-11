@@ -5,15 +5,9 @@ export interface MessageProps {
   message: string;
   sender: string;
   timestamp: number;
-  profilePic: string;
 }
 
-export default function Message({
-  message,
-  sender,
-  timestamp,
-  profilePic,
-}: MessageProps) {
+export default function Message({ message, sender, timestamp }: MessageProps) {
   const formatTimestamp = (timestamp: number) => {
     const date = new Date(timestamp);
     const now = new Date();
