@@ -31,6 +31,7 @@ const Messages: React.FC<MessagesProps> = ({ messages }) => {
       style={{ flex: 1 }}
       onContentSizeChange={() => flatListRef.current?.scrollToEnd()}
       onLayout={() => flatListRef.current?.scrollToEnd()}
+      showsVerticalScrollIndicator={false}
     />
   );
 };
