@@ -9,6 +9,7 @@ import { PromptTemplate } from "langchain/prompts";
 import { LLMChain } from "langchain/chains";
 import { ChatGoogleGenerativeAI } from "@langchain/google-genai";
 import { getVectorStore } from "./embeddings.ts";
+import { MultiQueryRetriever } from "langchain/retrievers/multi_query";
 
 Deno.serve(async (req) => {
   if (req.method === "OPTIONS") {
@@ -17,15 +18,15 @@ Deno.serve(async (req) => {
     });
   }
 
+  // TODO: send the message to include the chat id
   const { message } = await req.json();
 
   const client = supabaseClient(req);
 
   const vectorStore = await getVectorStore(client);
-  const retriever = vectorStore.asRetriever();
 
   const template =
-    "The user is trying to book a venue on campus. Specifically, they are asking you {message}. Here is the most similar database records: {data}. Help them choose the best one.";
+    "The user is trying to book a venue on campus. Specifically, they are asking you {message}. Here is the most similar database records: {data}. Help them choose the best one. If the records aren't relevant, still give them a suggestion.";
   const promptTemplate = new PromptTemplate({
     template,
     inputVariables: ["message", "data"],
@@ -41,16 +42,25 @@ Deno.serve(async (req) => {
     prompt: promptTemplate,
   });
 
-  const data = JSON.stringify(await retriever.getRelevantDocuments(message));
+  const retriever = MultiQueryRetriever.fromLLM({
+    llm: geminiModel,
+    retriever: vectorStore.asRetriever(),
+    verbose: true,
+  });
 
+  const docs = await retriever.getRelevantDocuments(message);
+
+  const data = JSON.stringify(docs.slice(0, 4));
+
+  // TODO:create the conversation chain
   const res = await llmChain.call({
-    message,
+    message: message,
     data,
   });
 
   return new Response(
     JSON.stringify({
-      message: res,
+      res,
       data,
     }),
     {

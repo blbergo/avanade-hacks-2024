@@ -11,7 +11,7 @@ export async function getVectorStore(client: any) {
 
   const docs: Document[] = [];
 
-  for (const document of documents!) {
+  for (const document of documents) {
     docs.push(
       new Document({
         pageContent: document.document!,
