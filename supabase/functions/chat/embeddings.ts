@@ -12,9 +12,18 @@ export async function getVectorStore(client: any) {
   const docs: Document[] = [];
 
   for (const document of documents) {
+    const data = JSON.parse(document.document);
+
     docs.push(
       new Document({
-        pageContent: document.document!,
+        pageContent: data.name,
+        metadata: {
+          capacity: data.capacity,
+          maxCapacity: data.max_capacity,
+          building: data.building,
+          features: data.features,
+          category: data.categories,
+        },
       }),
     );
   }

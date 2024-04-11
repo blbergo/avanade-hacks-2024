@@ -10,6 +10,12 @@ import { LLMChain } from "langchain/chains";
 import { ChatGoogleGenerativeAI } from "@langchain/google-genai";
 import { getVectorStore } from "./embeddings.ts";
 import { MultiQueryRetriever } from "langchain/retrievers/multi_query";
+import {
+  FunctionalTranslator,
+  SelfQueryRetriever,
+} from "https://esm.sh/langchain@0.1.32/retrievers/self_query";
+import { AttributeInfo } from "https://esm.sh/v135/langchain@0.1.32/dist/schema/query_constructor.js";
+import { StructuredOutputParser } from "https://esm.sh/v135/@langchain/core@0.1.53/denonext/output_parsers.js";
 
 Deno.serve(async (req) => {
   if (req.method === "OPTIONS") {
@@ -26,10 +32,10 @@ Deno.serve(async (req) => {
   const vectorStore = await getVectorStore(client);
 
   const template =
-    "The user is trying to book a venue on campus. Specifically, they are asking you {message}. Here is the most similar database records: {data}. Help them choose the best one. If the records aren't relevant, still give them a suggestion.";
+    "You are an AI assistant for Cal Poly Pomona who helps people book venues. The available venues are as follows: {data}. Continue the conversation: {messages}. \n{format_instructions}";
   const promptTemplate = new PromptTemplate({
     template,
-    inputVariables: ["message", "data"],
+    inputVariables: ["messages", "data", "format_instructions"],
   });
 
   const geminiModel = new ChatGoogleGenerativeAI({
@@ -42,26 +48,68 @@ Deno.serve(async (req) => {
     prompt: promptTemplate,
   });
 
-  const retriever = MultiQueryRetriever.fromLLM({
+  const documentContents = "Data about possible venues";
+
+  const attributeInfo: AttributeInfo[] = [
+    {
+      name: "capacity",
+      type: "number",
+      description: "The capacity of the venue",
+    },
+    {
+      name: "max_capacity",
+      type: "number",
+      description: "The maximum capacity of the venue",
+    },
+    {
+      name: "building",
+      type: "string",
+      description: "The building where the venue is located",
+    },
+    {
+      name: "features",
+      type: "string",
+      description: "The features and ammenities of the venue",
+    },
+    {
+      name: "categories",
+      type: "string",
+      description: "The categories of the venue",
+    },
+  ];
+
+  const retriever = SelfQueryRetriever.fromLLM({
     llm: geminiModel,
-    retriever: vectorStore.asRetriever(),
-    verbose: true,
+    vectorStore,
+    documentContents,
+    attributeInfo,
+    structuredQueryTranslator: new FunctionalTranslator(),
   });
 
   const docs = await retriever.getRelevantDocuments(message);
 
-  const data = JSON.stringify(docs.slice(0, 4));
+  const parser = StructuredOutputParser.fromNamesAndDescriptions({
+    record: {
+      capicty: "The capacity of the venue",
+      max_capacity: "The maximum capacity of the venue",
+      building: "The building where the venue is located",
+      features: "The features and ammenities of the venue",
+      categories: "The categories of the venue",
+      name: "The name of the venue",
+    },
+    message: "Your response to the conversation",
+  });
 
   // TODO:create the conversation chain
-  const res = await llmChain.call({
-    message: message,
-    data,
+  const res = await llmChain.invoke({
+    messages: message,
+    data: JSON.stringify(docs),
+    format_instructions: parser.getFormatInstructions(),
   });
 
   return new Response(
     JSON.stringify({
       res,
-      data,
     }),
     {
       headers: { "Content-Type": "application/json" },
