@@ -32,7 +32,7 @@ Deno.serve(async (req) => {
   const vectorStore = await getVectorStore(client);
 
   const template =
-    "You are an AI assistant for Cal Poly Pomona who helps people book venues. The available venues are as follows: {data}. Continue the conversation: {messages}. \n{format_instructions}";
+    "You are an AI assistant for Cal Poly Pomona who helps people choose venues for events. The available venues are as follows: {data}. \nContinue the conversation: {messages}. \n{format_instructions}";
   const promptTemplate = new PromptTemplate({
     template,
     inputVariables: ["messages", "data", "format_instructions"],
