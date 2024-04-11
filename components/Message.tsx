@@ -1,6 +1,7 @@
-import { Image, View, Text } from "react-native";
+import { Image, View, Text, SafeAreaView } from "react-native";
 
 export interface MessageProps {
+  messageid: number;
   message: string;
   sender: string;
   timestamp: number;
@@ -32,20 +33,28 @@ export default function Message({
   };
 
   return (
-    <View className="flex flex-row pb-5">
+    <View className="flex flex-row w-full mt-5">
+      {/*
       <Image
         className="rounded-full mx-[15px]"
         source={{
           uri: profilePic,
         }}
         style={{ resizeMode: "cover", width: 45, height: 45 }}
-      />
-      <View className="flex flex-col">
-        <View className="flex flex-row gap-x-[15px]">
-          <Text className="text-offwhite">{sender}</Text>
-          <Text className="text-secondary">{formatTimestamp(timestamp)}</Text>
+      />*/}
+
+      <View className="bg-offwhite rounded-full h-[45px] w-[45px] mr-[15px]" />
+
+      <View className="flex flex-col flex-1">
+        <View className="flex flex-row gap-x-[15px] items-end">
+          <Text className="text-offwhite text-lg font-medium">{sender}</Text>
+          <Text className="text-secondary text-base font-regular mb-[2px]">
+            {formatTimestamp(timestamp)}
+          </Text>
         </View>
-        <Text className="text-offwhite">{message}</Text>
+        <Text className="text-offwhite text-lg font-regular text-balance">
+          {message}
+        </Text>
       </View>
     </View>
   );

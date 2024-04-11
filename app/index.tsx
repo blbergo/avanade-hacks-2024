@@ -9,9 +9,7 @@ export default function Home() {
         <Text>Appstack</Text>
         <Link href="./signin">Sign in</Link>
         <Link href="./signup">Sign up</Link>
-        <Link push href={"/chat/"}>
-          Chat
-        </Link>
+        <Link href={"./chatpage"}>Chat Page</Link>
       </View>
     </SafeAreaView>
   );
