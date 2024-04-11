@@ -1,22 +1,39 @@
+import React, { useRef, useEffect } from "react";
+import { FlatList } from "react-native";
 import Message, { MessageProps } from "./Message";
-import { View } from "react-native";
 
 interface MessagesProps {
   messages: MessageProps[];
 }
-export default function Messages({ messages }: MessagesProps) {
+
+const Messages: React.FC<MessagesProps> = ({ messages }) => {
+  const flatListRef = useRef<FlatList>(null);
+
+  useEffect(() => {
+    // scroll to the bottom when messages change
+    flatListRef.current?.scrollToEnd();
+  }, [messages]);
+
   return (
-    <View className="flex flex-col flex-grow mt-5">
-      {messages.map((item) => {
-        return (
-          <Message
-            message={item.message}
-            sender={item.sender}
-            timestamp={item.timestamp}
-            profilePic={item.profilePic}
-          />
-        );
-      })}
-    </View>
+    <FlatList
+      ref={flatListRef}
+      data={messages}
+      renderItem={({ item }) => (
+        <Message
+          messageid={item.messageid}
+          message={item.message}
+          sender={item.sender}
+          timestamp={item.timestamp}
+          profilePic={item.profilePic}
+        />
+      )}
+      keyExtractor={(item) => item.messageid.toString()}
+      style={{ flex: 1 }}
+      onContentSizeChange={() => flatListRef.current?.scrollToEnd()}
+      onLayout={() => flatListRef.current?.scrollToEnd()}
+      showsVerticalScrollIndicator={false}
+    />
   );
-}
+};
+
+export default Messages;
