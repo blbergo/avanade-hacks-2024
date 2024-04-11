@@ -60,7 +60,7 @@ export default function ChatPage() {
     console.log("Invoking chat function");
     const { data, error } = await supabase.functions.invoke("chat", {
       body: {
-        messages: JSON.stringify(messages),
+        message: JSON.stringify([...messages, newMessage]),
       },
     });
 
@@ -83,6 +83,7 @@ export default function ChatPage() {
     };
 
     console.log("response", response.shouldShowRecord);
+    console.log("response", response);
 
     // TODO: show button
 
