@@ -10,6 +10,7 @@ export default function Home() {
         <Link href="./signin">Sign in</Link>
         <Link href="./signup">Sign up</Link>
         <Link href="./chatpage">Chat Page</Link>
+        <Link href="./modalview">Modal View</Link>
       </View>
     </SafeAreaView>
   );
