@@ -29,7 +29,7 @@ export default function SignUp() {
     if (error) {
       console.log(error);
     } else {
-      router.push("../chat");
+      router.push(`/chat/${session?.user.id}/`);
     }
   };
 
@@ -38,8 +38,13 @@ export default function SignUp() {
       .from("users")
       .insert([{ created_at: user.created_at, uuid: user.id }]);
 
-    if (response.error) {
-      console.log(response.error);
+    const response2 = await supabase.from("chats").insert({
+      messages: [],
+      chat_id: user.id,
+    });
+
+    if (response.error || response2.error) {
+      console.log(response.error || response2.error);
     } else {
       console.log("user added");
     }

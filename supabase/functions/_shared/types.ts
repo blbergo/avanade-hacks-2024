@@ -11,19 +11,19 @@ export type Database = {
     Tables: {
       chats: {
         Row: {
-          chat_id: number | null;
+          chat_id: string | null;
           created_at: string;
           id: number;
           messages: Json | null;
         };
         Insert: {
-          chat_id?: number | null;
+          chat_id?: string | null;
           created_at?: string;
           id?: number;
           messages?: Json | null;
         };
         Update: {
-          chat_id?: number | null;
+          chat_id?: string | null;
           created_at?: string;
           id?: number;
           messages?: Json | null;

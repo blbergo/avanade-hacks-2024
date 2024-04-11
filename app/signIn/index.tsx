@@ -40,7 +40,7 @@ export default function SignIn() {
     if (error) {
       console.log(error);
     } else if (session) {
-      router.push("../chat");
+      router.push(`/chat/${session?.user.id}/`);
     }
   };
 

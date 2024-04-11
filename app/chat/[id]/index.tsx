@@ -18,6 +18,9 @@ import { Json } from "@/supabase/functions/_shared/types";
 
 interface ChatResponse {
   message: string;
+  record: {
+    name: string;
+  };
   shouldShowRecord: boolean;
 }
 
@@ -35,7 +38,7 @@ export default function ChatPage() {
         table: "chats",
       },
       (payload) => {
-        if (payload.new.id == local.id) {
+        if (payload.new.chat_id == local.id) {
           // update the messages
           const data = payload.new.messages as MessageProps[];
           setMessages(data);
@@ -54,7 +57,7 @@ export default function ChatPage() {
 
     setMessages([...messages, newMessage]);
 
-    console.log("Invoking chat function...");
+    console.log("Invoking chat function");
     const { data, error } = await supabase.functions.invoke("chat", {
       body: {
         message,
@@ -63,17 +66,13 @@ export default function ChatPage() {
 
     if (error) {
       console.error(error);
-      return;
     }
 
+    console.log("finished invoking chat function");
     let trimmed = JSON.stringify(data);
-    trimmed = trimmed.replace("jsonn", "");
-    trimmed = trimmed.replace(/\n/g, "");
-    trimmed = trimmed.replace(/\\/g, "");
-    trimmed = trimmed.replace("n```", "");
-    trimmed = trimmed.replace("```", "");
-    trimmed = trimmed.slice(14, -2);
 
+    trimmed = trimmed.match(/json\\n(.*\w)```/)![1];
+    trimmed = trimmed.replace(/\\n/g, "").replace(/\\/g, "");
     const response: ChatResponse = JSON.parse(trimmed);
 
     const newBotMessage = {
@@ -83,15 +82,17 @@ export default function ChatPage() {
       timestamp: Date.now(),
     };
 
-    console.log(response.shouldShowRecord);
-
     const { error: InsertError2 } = await supabase
       .from("chats")
       .update({
         //@ts-ignore
         messages: [...messages, newMessage, newBotMessage],
       })
-      .match({ id: local.id });
+      .match({ chat_id: local.id });
+
+    if (InsertError2) {
+      console.error(InsertError2);
+    }
   };
 
   return (

@@ -12,7 +12,6 @@ export default function Message({ message, sender, timestamp }: MessageProps) {
     const date = new Date(timestamp);
     const now = new Date();
     const diff = now.getTime() - date.getTime();
-    console.log(diff);
     if (diff < 1000 * 60) {
       return "Just now";
     } else if (diff < 1000 * 60 * 60) {
@@ -37,7 +36,9 @@ export default function Message({ message, sender, timestamp }: MessageProps) {
         style={{ resizeMode: "cover", width: 45, height: 45 }}
       />*/}
 
-      <View className="bg-offwhite rounded-full h-[45px] w-[45px] mr-[15px]" />
+      <View
+        className={`${sender == "Bot" ? "bg-accent" : "bg-offwhite"} rounded-full h-[45px] w-[45px] mr-[15px]`}
+      />
 
       <View className="flex flex-col flex-1">
         <View className="flex flex-row gap-x-[15px] items-end">
