@@ -32,6 +32,10 @@ const Messages: React.FC<MessagesProps> = ({ messages }) => {
           name={item.name}
           type={item.type}
           capacity={item.capacity}
+          max_capacity={item.max_capacity}
+          categories={item.categories}
+          features={item.features}
+          building={item.building}
         />
       );
     }

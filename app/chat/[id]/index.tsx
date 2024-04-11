@@ -69,11 +69,12 @@ export default function ChatPage() {
     console.log("Invoking chat function");
     const { data, error } = await supabase.functions.invoke("chat", {
       body: {
-        message: JSON.stringify([...messages, newMessage]),
+        message: JSON.stringify(messages),
       },
     });
 
     if (error) {
+      console.error(error);
       setMessages([
         ...messages,
         newMessage,
@@ -111,7 +112,12 @@ export default function ChatPage() {
         max_capacity: response.max_capacity,
         name: response.name,
         type: response.type,
+        categories: response.categories,
+        features: response.features,
+        building: response.building,
       };
+
+      console.log(roomButton);
       updatedMessages.push(roomButton);
     }
 

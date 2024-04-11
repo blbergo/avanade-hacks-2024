@@ -6,10 +6,13 @@ import RoomModal from "./RoomModal";
 
 export interface RoomButtonProps {
   roomnumber: string;
-  name?: string;
+  name: string;
   capacity: string;
   max_capacity?: string;
   type?: string;
+  categories?: string[];
+  features: string[];
+  building: string;
 }
 
 export default function RoomButton({
@@ -18,6 +21,9 @@ export default function RoomButton({
   type,
   capacity,
   max_capacity,
+  categories,
+  features,
+  building,
 }: RoomButtonProps) {
   const bottomSheetRef = useRef<BottomSheetModal>(null);
   const { dismiss } = useBottomSheetModal();
@@ -26,7 +32,13 @@ export default function RoomButton({
 
   return (
     <>
-      <RoomModal ref={bottomSheetRef} />
+      <RoomModal
+        categories={categories}
+        features={features}
+        building={building}
+        name={name}
+        ref={bottomSheetRef}
+      />
       <Pressable
         onPress={handlePresentModalPress}
         className="flex flex-row w-full px-5 py-4 gap-5 border border-accent rounded-2xl items-center justify-start mt-5 active:opacity-60"
