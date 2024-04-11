@@ -1,20 +1,15 @@
 // Import your global CSS file
 import "../global.css";
 
-import { Stack } from "expo-router";
-
-//const Stack = createNativeStackNavigator();
+import { Slot, Stack } from "expo-router";
+import { SafeAreaProvider, SafeAreaView } from "react-native-safe-area-context";
 
 export default function RootLayout() {
   return (
-    <Stack
-      screenOptions={{
-        headerShown: false,
-      }}
-    >
-      <Stack.Screen name="signIn" options={{ headerShown: false }} />
-      <Stack.Screen name="signUp" options={{ headerShown: false }} />
-      {/* <Stack.Screen name="chat" options={{ headerShown: false }} /> */}
-    </Stack>
+    <>
+      <SafeAreaProvider>
+        <Slot />
+      </SafeAreaProvider>
+    </>
   );
 }

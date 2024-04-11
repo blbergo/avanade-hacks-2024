@@ -17,38 +17,45 @@ export default function SignUp() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
-  const addUserToUsers = (user: any) => {
-    supabase
-      .from("users")
-      .insert([{ created_at: user.created_at, uuid: user.id }])
-      .then((res: any) => {
-        const { error } = res;
-        if (error) {
-          console.log(error);
-        } else {
-          console.log("user added");
-        }
-      });
+  const loginUser = async () => {
+    const {
+      data: { session },
+      error,
+    } = await supabase.auth.signInWithPassword({
+      email: email,
+      password: password,
+    });
+
+    if (error) {
+      console.log(error);
+    } else {
+      router.push("../chat");
+    }
   };
 
-  const signUpUser = () => {
-    supabase.auth
-      .signUp({
-        email: email,
-        password: password,
-      })
-      .then((res: any) => {
-        const {
-          data: { user },
-          error,
-        } = res;
-        if (error) {
-          console.log(error);
-        } else {
-          addUserToUsers(user);
-          router.back();
-        }
-      });
+  const addUserToUsers = async (user: any) => {
+    const response = await supabase
+      .from("users")
+      .insert([{ created_at: user.created_at, uuid: user.id }]);
+
+    if (response.error) {
+      console.log(response.error);
+    } else {
+      console.log("user added");
+    }
+  };
+
+  const signUpUser = async () => {
+    const {
+      data: { user },
+      error,
+    } = await supabase.auth.signUp({ email: email, password: password });
+    if (error) {
+      console.log(error);
+    } else {
+      addUserToUsers(user);
+      loginUser();
+    }
   };
 
   return (
