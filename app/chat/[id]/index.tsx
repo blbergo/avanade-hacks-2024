@@ -15,18 +15,27 @@ import { MessageProps } from "@/components/Message";
 import { useLocalSearchParams } from "expo-router";
 import { supabase } from "@/utils/supabase";
 import { Json } from "@/supabase/functions/_shared/types";
+import { RoomButtonProps } from "@/components/RoomButton";
 
 interface ChatResponse {
   message: string;
-  record: {
-    name: string;
-  };
+
+  capacity: string;
+  max_capacity: string;
+  building: string;
+  features: string[];
+  categories: string[];
+  name: string;
+  type: string;
+
   shouldShowRecord: boolean;
 }
 
 export default function ChatPage() {
   const local = useLocalSearchParams<{ id: string }>();
-  const [messages, setMessages] = useState<MessageProps[]>([]);
+  const [messages, setMessages] = useState<(MessageProps | RoomButtonProps)[]>(
+    [],
+  );
 
   const channel = supabase
     .channel("schema-db-changes")
@@ -65,7 +74,17 @@ export default function ChatPage() {
     });
 
     if (error) {
-      console.error(error);
+      setMessages([
+        ...messages,
+        newMessage,
+        {
+          messageid: messages.length + 2,
+          message: "An error occurred while sending the message",
+          sender: "Venue Bot",
+          timestamp: Date.now(),
+        },
+      ]);
+      return;
     }
 
     console.log("finished invoking chat function");
@@ -78,20 +97,29 @@ export default function ChatPage() {
     const newBotMessage = {
       messageid: messages.length + 7,
       message: response.message,
-      sender: "Bot",
+      sender: "Venue Bot",
       timestamp: Date.now(),
     };
 
-    console.log("response", response.shouldShowRecord);
-    console.log("response", response);
+    const updatedMessages = [...messages, newMessage, newBotMessage];
 
-    // TODO: show button
+    console.log(response);
+    if (response.shouldShowRecord) {
+      const roomButton: RoomButtonProps = {
+        roomnumber: response.building,
+        capacity: response.capacity,
+        max_capacity: response.max_capacity,
+        name: response.name,
+        type: response.type,
+      };
+      updatedMessages.push(roomButton);
+    }
 
     const { error: InsertError2 } = await supabase
       .from("chats")
       .update({
         //@ts-ignore
-        messages: [...messages, newMessage, newBotMessage],
+        messages: updatedMessages,
       })
       .match({ chat_id: local.id });
 

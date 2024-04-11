@@ -4,7 +4,8 @@ import { FontAwesome6 } from "@expo/vector-icons";
 export interface RoomButtonProps {
   roomnumber: string;
   name?: string;
-  capacity: number;
+  capacity: string;
+  max_capacity?: string;
   type?: string;
 }
 
@@ -13,6 +14,7 @@ export default function RoomButton({
   name,
   type,
   capacity,
+  max_capacity,
 }: RoomButtonProps) {
   return (
     <Pressable className="flex flex-row w-full px-5 py-4 gap-5 border border-accent rounded-2xl items-center justify-start mt-5 active:opacity-60">
@@ -22,9 +24,9 @@ export default function RoomButton({
           {name ? name : roomnumber}
         </Text>
         <Text className="text-secondary text-base font-regular">
-          {name ? `${roomnumber} • ` : ""}
+          {roomnumber ? `${roomnumber} • ` : ""}
           {type ? `${type} • ` : ""}
-          {capacity} Max
+          {max_capacity ? max_capacity : capacity} Max
         </Text>
       </View>
     </Pressable>

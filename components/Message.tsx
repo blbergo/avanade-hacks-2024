@@ -37,7 +37,7 @@ export default function Message({ message, sender, timestamp }: MessageProps) {
       />*/}
 
       <View
-        className={`${sender == "Bot" ? "bg-accent" : "bg-offwhite"} rounded-full h-[45px] w-[45px] mr-[15px]`}
+        className={`${sender == "Venue Bot" ? "bg-accent" : "bg-offwhite"} rounded-full h-[45px] w-[45px] mr-[15px]`}
       />
 
       <View className="flex flex-col flex-1">

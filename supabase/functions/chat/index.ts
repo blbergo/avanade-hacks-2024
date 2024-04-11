@@ -9,7 +9,6 @@ import { PromptTemplate } from "langchain/prompts";
 import { LLMChain } from "langchain/chains";
 import { ChatGoogleGenerativeAI } from "@langchain/google-genai";
 import { getVectorStore } from "./embeddings.ts";
-import { MultiQueryRetriever } from "langchain/retrievers/multi_query";
 import {
   FunctionalTranslator,
   SelfQueryRetriever,
@@ -32,7 +31,7 @@ Deno.serve(async (req) => {
   const vectorStore = await getVectorStore(client);
 
   const template =
-    "You are an AI assistant for Cal Poly Pomona who helps people book venues. The available venues are as follows: {data}. Continue the conversation: {messages}. \n{format_instructions}";
+    "You are an AI assistant for Cal Poly Pomona who helps people choose venues on campus. The available venues are as follows: {data}. Continue the conversation: {messages}. \n{format_instructions}";
   const promptTemplate = new PromptTemplate({
     template,
     inputVariables: ["messages", "data", "format_instructions"],
@@ -84,21 +83,25 @@ Deno.serve(async (req) => {
     documentContents,
     attributeInfo,
     structuredQueryTranslator: new FunctionalTranslator(),
+    searchParams: {
+      k: 10,
+    },
   });
 
   const docs = await retriever.getRelevantDocuments(message);
 
   const parser = StructuredOutputParser.fromNamesAndDescriptions({
-    record: {
-      capacity: "The capacity of the venue",
-      max_capacity: "The maximum capacity of the venue",
-      building: "The building where the venue is located",
-      features: "The features and ammenities of the venue",
-      categories: "The categories of the venue",
-      name: "The name of the venue",
-    },
+    capacity: "The capacity of the selected venue",
+    max_capacity: "The maximum capacity of the selected venue",
+    building: "The building where the selected venue is located",
+    features: "The features and ammenities of the selected venue",
+    categories: "The categories of the selected venue",
+    name: "The name of the selected venue",
+    type: "The type of the selected venue, listed in categories",
+
     message: "Your response to the conversation",
-    shouldShowRecord: "whether the user wants to reserve a venue",
+    shouldShowRecord:
+      "true/false whether its appropriate to let the user select a venue",
   });
 
   // TODO:create the conversation chain
