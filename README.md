@@ -1,6 +1,16 @@
-# Native Wind Supabase Template
+# 2024 Avanade AI for Good Hackathon
 
 This is a simple template for creating an Expo-Supabase-Nativewind app.
+
+# Features
+- User Authentication
+- Chatbot powered by Gemini
+
+# Tech Stack
+- Expo
+- Supabase
+- LangChain
+- NativeWind
 
 # Get Started
 
